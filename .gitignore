@@ -1,0 +1,31 @@
+# Vercel
+.vercel
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Node modules (if you ever use npm)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
+/dist
+/build
