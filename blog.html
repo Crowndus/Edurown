@@ -179,6 +179,7 @@
     font-weight: 700;
     color: var(--gold-tint);
     display: block;
+    min-width: 40px;
   }
 
   .blog-stat-label {
@@ -235,15 +236,15 @@
 
     <div class="blog-stats">
       <div class="blog-stat">
-        <span class="blog-stat-number">3</span>
+        <span class="blog-stat-number" id="stat-posts">0</span>
         <span class="blog-stat-label">Published Posts</span>
       </div>
       <div class="blog-stat">
-        <span class="blog-stat-number">15</span>
+        <span class="blog-stat-number" id="stat-minutes">0</span>
         <span class="blog-stat-label">Minutes of Reading</span>
       </div>
       <div class="blog-stat">
-        <span class="blog-stat-number">4</span>
+        <span class="blog-stat-number" id="stat-categories">0</span>
         <span class="blog-stat-label">Categories</span>
       </div>
     </div>
@@ -266,7 +267,6 @@
   <div class="container">
     <div class="grid grid-2" style="max-width:900px;margin:0 auto;" id="blogGrid">
 
-      <!-- Blog Post 1 -->
       <div class="blog-card reveal" data-category="academic-writing">
         <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fm=jpg&q=80&w=600&fit=crop" alt="Research paper" class="blog-card-image" loading="lazy">
         <div class="blog-card-content">
@@ -295,7 +295,6 @@
         </div>
       </div>
 
-      <!-- Blog Post 2 -->
       <div class="blog-card reveal" data-category="story">
         <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=80&w=600&fit=crop" alt="Edurown story" class="blog-card-image" loading="lazy">
         <div class="blog-card-content">
@@ -324,7 +323,6 @@
         </div>
       </div>
 
-      <!-- Blog Post 3 -->
       <div class="blog-card reveal" data-category="citation">
         <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?fm=jpg&q=80&w=600&fit=crop" alt="Citation mistakes" class="blog-card-image" loading="lazy">
         <div class="blog-card-content">
@@ -353,7 +351,6 @@
         </div>
       </div>
 
-      <!-- Blog Post 4 (Coming Soon) -->
       <div class="blog-card blog-card-coming reveal" data-category="data-science">
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?fm=jpg&q=80&w=600&fit=crop" alt="Data analysis" class="blog-card-image" loading="lazy">
         <div class="blog-card-content">
@@ -438,6 +435,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Category Filter
     const filterButtons = document.querySelectorAll('.category-filter button');
     const blogCards = document.querySelectorAll('.blog-card');
 
@@ -457,6 +455,50 @@
         });
       });
     });
+
+    // ===== ANIMATED COUNTER =====
+    function animateCounter(element, target, duration) {
+      let start = 0;
+      const increment = target / (duration / 16);
+
+      function updateCounter() {
+        start += increment;
+        if (start >= target) {
+          element.textContent = target;
+          return;
+        }
+        element.textContent = Math.floor(start);
+        requestAnimationFrame(updateCounter);
+      }
+
+      updateCounter();
+    }
+
+    // ===== SET STATS VALUES (UPDATE THESE WHEN YOU ADD NEW POSTS) =====
+    const stats = {
+      posts: 3,        // <-- Update this when you add new posts
+      minutes: 15,     // <-- Update this when you add new posts (total reading time)
+      categories: 4    // <-- Update this when you add new categories
+    };
+
+    // ===== RUN COUNTERS WHEN PAGE LOADS =====
+    const postsEl = document.getElementById('stat-posts');
+    const minutesEl = document.getElementById('stat-minutes');
+    const categoriesEl = document.getElementById('stat-categories');
+
+    // Use IntersectionObserver to start counters when visible
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(postsEl, stats.posts, 1200);
+          animateCounter(minutesEl, stats.minutes, 1200);
+          animateCounter(categoriesEl, stats.categories, 1200);
+          observer.disconnect(); // Only run once
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(postsEl);
   });
 </script>
 
