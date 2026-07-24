@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Edurown</title>
+<meta name="description" content="Expert advice on academic writing, data analysis, research, and technical projects from Edurown.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23171b2b'/%3E%3Cpath d='M16 40 L16 26 L23 33 L32 20 L41 33 L48 26 L48 40 Z' fill='none' stroke='%23a9823d' stroke-width='2' stroke-linejoin='round'/%3E%3Cline x1='16' y1='44' x2='48' y2='44' stroke='%23a9823d' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+  /* ===== PARALLAX STYLES ===== */
+  .parallax-section {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  .parallax-hero {
+    background-image: linear-gradient(rgba(23,27,43,0.85), rgba(23,27,43,0.85)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?fm=jpg&q=80&w=1600&fit=crop');
+    background-attachment: fixed;
+    background-position: center 30%;
+    background-size: cover;
+    padding: 6.5rem 0;
+    position: relative;
+  }
+
+  .parallax-hero .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .parallax-divider {
+    background-image: linear-gradient(rgba(23,27,43,0.70), rgba(23,27,43,0.70)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=80&w=1600&fit=crop');
+    background-attachment: fixed;
+    background-position: center 40%;
+    background-size: cover;
+    padding: 4rem 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+  }
+
+  .parallax-divider .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .parallax-divider h2 {
+    color: #fff;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .parallax-divider p {
+    color: rgba(255,255,255,0.8);
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  /* Fallback for browsers that don't support background-attachment: fixed */
+  @supports not (background-attachment: fixed) {
+    .parallax-hero {
+      background-attachment: scroll;
+    }
+    .parallax-divider {
+      background-attachment: scroll;
+    }
+  }
+
+  /* Mobile fix - disable parallax on small screens for performance */
+  @media (max-width: 768px) {
+    .parallax-hero {
+      background-attachment: scroll;
+    }
+    .parallax-divider {
+      background-attachment: scroll;
+    }
+  }
+
+  /* ===== BLOG CARD STYLES ===== */
+  .blog-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--r-md);
+    overflow: hidden;
+    padding: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(23, 27, 43, 0.12);
+  }
+
+  .blog-card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: var(--paper-alt);
+    transition: transform 0.3s ease;
+  }
+
+  .blog-card:hover .blog-card-image {
+    transform: scale(1.02);
+  }
+
+  .blog-card-content {
+    padding: 1.5rem;
+  }
+
+  .blog-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .blog-card-category {
+    font-size: 0.7rem;
+    background: var(--gold-tint);
+    color: var(--gold-deep);
+    font-weight: 600;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+  }
+
+  .blog-card-date {
+    font-size: 0.65rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .blog-card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-card-title a {
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .blog-card-title a:hover {
+    color: var(--gold);
+  }
+
+  .blog-card-excerpt {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+  }
+
+  .blog-card-readmore {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: gap 0.2s ease;
+  }
+
+  .blog-card-readmore:hover {
+    gap: 8px;
+  }
+
+  /* Coming Soon Card */
+  .blog-card-coming {
+    opacity: 0.7;
+    cursor: default;
+  }
+
+  .blog-card-coming:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .blog-card-coming .blog-card-image {
+    filter: grayscale(0.6);
+  }
+
+  /* ===== CATEGORY FILTER ===== */
+  .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .category-filter button {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.4rem 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-sans);
+  }
+
+  .category-filter button:hover,
+  .category-filter button.active {
+    background: var(--gold);
+    color: #fff;
+    border-color: var(--gold);
+  }
+
+  /* ===== INTERACTIVE STATS ===== */
+  .blog-stats {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .blog-stat {
+    text-align: center;
+  }
+
+  .blog-stat-number {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+  }
+
+  .blog-stat-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 600px) {
+    .blog-stats {
+      gap: 1.5rem;
+    }
+    .blog-stat-number {
+      font-size: 1.4rem;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<header class="nav">
+  <div class="container">
+    <a href="index.html" class="seal">
+      <svg viewBox="0 0 64 64" fill="none" stroke="var(--gold)" stroke-width="1.5">
+        <circle cx="32" cy="32" r="30" stroke-width="1"/>
+        <path d="M16 40 L16 26 L23 33 L32 20 L41 33 L48 26 L48 40 Z" stroke-linejoin="round"/>
+        <line x1="16" y1="44" x2="48" y2="44"/>
+      </svg>
+      <span class="seal-word">Edu<span>rown</span></span>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="mailto:stephen.crowndus1@gmail.com" class="btn btn-outline">Email Directly</a>
+      <a href="contact.html" class="btn btn-gold">Start a Project</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== PARALLAX HERO ===== -->
+<section class="parallax-hero">
+  <div class="container reveal">
+    <div class="eyebrow" style="color:var(--gold-tint);">Blog</div>
+    <h1 style="color:#fff;">Expert Advice for Students & Professionals</h1>
+    <p class="lead" style="max-width:640px;color:rgba(255,255,255,0.78);">Tips, guides, and insights on academic writing, data analysis, research, and technical projects.</p>
+
+    <!-- Blog Stats -->
+    <div class="blog-stats">
+      <div class="blog-stat">
+        <span class="blog-stat-number">3</span>
+        <span class="blog-stat-label">Published Posts</span>
+      </div>
+      <div class="blog-stat">
+        <span class="blog-stat-number">15</span>
+        <span class="blog-stat-label">Minutes of Reading</span>
+      </div>
+      <div class="blog-stat">
+        <span class="blog-stat-number">4</span>
+        <span class="blog-stat-label">Categories</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORY FILTER ===== -->
+<section class="section" style="padding-bottom:0;background:var(--paper);">
+  <div class="container">
+    <div class="category-filter" id="categoryFilter">
+      <button class="active" data-category="all">All</button>
+      <button data-category="academic-writing">Academic Writing</button>
+      <button data-category="data-science">Data Science</button>
+      <button data-category="story">Story</button>
+      <button data-category="citation">Citation</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOG POSTS ===== -->
+<section class="section" style="position:relative;background:var(--paper);padding-top:1rem;">
+  <div class="container">
+    <div class="grid grid-2" style="max-width:900px;margin:0 auto;" id="blogGrid">
+
+      <!-- Blog Post 1 -->
+      <div class="blog-card reveal" data-category="academic-writing">
+        <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fm=jpg&q=80&w=600&fit=crop" alt="Writing a research paper" class="blog-card-image" loading="lazy">
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Academic Writing</span>
+            <span class="blog-card-date">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              July 24, 2026
+            </span>
+            <span class="blog-card-date">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              5 min
+            </span>
+          </div>
+          <h3 class="blog-card-title"><a href="blog-post-1.html">How to Write a Research Paper in 7 Days</a></h3>
+          <p class="blog-card-excerpt">A step-by-step guide to writing a high-quality research paper when you're short on time.</p>
+          <a href="blog-post-1.html" class="blog-card-readmore">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="blog-card reveal" data-category="story">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=80&w=600&fit=crop" alt="Why I built Edurown" class="blog-card-image" loading="lazy">
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Story</span>
+            <span class="blog-card-date">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              July 24, 2026
+            </span>
+            <span class="blog-card-date">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              4 min
+            </span>
+          </div>
+          <h3 class="blog-card-title"><a href="blog-post-3.html">Why I Built Edurown</a></h3>
+          <p class="blog-card-excerpt">The story behind the platform and why I believe students deserve better than expensive middlemen.</p>
+          <a href="blog-post-3.html" class="blog-card-readmore">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 3 -->
+      <div class="blog-card reveal" data-category="citation">
+        <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?fm=jpg&q=80&w=600&fit=crop" alt="Citation guide" class="blog-card-image" loading="lazy">
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span class="blog-card-category">Citation</span>
+            <span class="blog-card-date">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              July 24, 2026
+            </span>
+            <span class="blog-card-date">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              6 min
+            </span>
+          </div>
+          <h3 class="blog-card-title"><a href="blog-post-4.html">MLA, APA, Harvard: The Ultimate Citation Guide</a></h3>
+          <p class="blog-card-excerpt">Learn the differences between MLA, APA, and Harvard citation styles with examples.</p>
+          <a href="blog-post-4.html" class="blog-card-readmore">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Blog Post 4 (Coming Soon) -->
+      <div class="blog-card blog-card-coming reveal" data-category="data-science">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?fm=jpg&q=80&w=600&fit=crop" alt="Data analysis" class="blog-card-image" loading="lazy">
+        <div class="blog-card-content">
+          <div class="blog-card-meta">
+            <span class="blog-card-category" style="background:var(--paper-alt);color:var(--muted);">Data Science</span>
+            <span class="blog-card-date" style="color:var(--muted);">Coming Soon</span>
+          </div>
+          <h3 class="blog-card-title" style="color:var(--muted);">Lung Cancer Data Analysis with Python</h3>
+          <p class="blog-card-excerpt" style="color:var(--muted);">How I processed 10,000+ patient records to analyze treatment outcomes by ethnicity and cancer stage.</p>
+          <span style="color:var(--muted);font-size:0.85rem;display:flex;align-items:center;gap:4px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Coming soon...
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARALLAX DIVIDER ===== -->
+<section class="parallax-divider">
+  <div class="container reveal">
+    <h2>Knowledge is Power</h2>
+    <p>Every blog post is crafted from real experience, helping students and professionals navigate academic and technical challenges with confidence.</p>
+    <a href="contact.html" class="btn btn-gold" style="display:inline-flex;align-items:center;gap:6px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Get Expert Help
+    </a>
+  </div>
+</section>
+
+<!-- ===== GET A FREE QUOTE CTA ===== -->
+<section class="section" style="background:var(--paper-alt);padding:3rem 0;text-align:center;">
+  <div class="container">
+    <h2 style="margin-bottom:0.5rem;">Get a Free Quote</h2>
+    <p class="lead" style="max-width:500px;margin:0 auto 1.5rem;">Tell us about your project and we'll get back to you within 24 hours with a free, no-obligation quote.</p>
+    <div class="btn-row" style="justify-content:center;">
+      <a href="https://wa.me/254792915655" target="_blank" class="btn btn-gold" style="display:inline-flex;align-items:center;gap:6px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+          <path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L3 20l1-5.6A8.5 8.5 0 1121 11.5z"/>
+        </svg>
+        WhatsApp
+      </a>
+      <a href="mailto:stephen.crowndus1@gmail.com" class="btn btn-outline" style="display:inline-flex;align-items:center;gap:6px;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="M22 7L12 13 2 7"/>
+        </svg>
+        Email Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="seal" style="margin-bottom:1rem;">
+          <svg viewBox="0 0 64 64" fill="none" stroke="var(--gold)" stroke-width="1.5" style="width:30px;height:30px;">
+            <circle cx="32" cy="32" r="30" stroke-width="1"/>
+            <path d="M16 40 L16 26 L23 33 L32 20 L41 33 L48 26 L48 40 Z" stroke-linejoin="round"/>
+            <line x1="16" y1="44" x2="48" y2="44"/>
+          </svg>
+          <span class="seal-word">Edu<span>rown</span></span>
+        </div>
+        <p style="max-width:320px;">Direct academic and technical writing support for students and professionals worldwide, handled personally, start to finish.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Get In Touch</h4>
+        <a href="mailto:stephen.crowndus1@gmail.com">stephen.crowndus1@gmail.com</a>
+        <a href="https://wa.me/254792915655" target="_blank">+254 792 915655</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Edurown. All rights reserved. Operations support by Humphrey.</span>
+      <span>Remote-First - Serving Clients Worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/254792915655" target="_blank" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.2c1.9 1 4.1 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.7c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4a10.2 10.2 0 01-1.6-5.4C5.5 9.7 10.2 5 16 5s10.5 4.7 10.5 10.5S21.8 25.7 16 25.7zm5.8-7.9c-.3-.2-1.9-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.6 8.6 0 01-2.5-1.5 9.3 9.3 0 01-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5s-.7-1.7-1-2.3-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4A3.6 3.6 0 009 12.4c0 1.3.9 2.6 1.1 2.8s1.8 2.8 4.4 3.9a15 15 0 001.5.5 3.5 3.5 0 001.6.1c.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
+</a>
+
+<script src="js/script.js"></script>
+
+<!-- ===== CATEGORY FILTER INTERACTIVITY ===== -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.category-filter button');
+    const blogCards = document.querySelectorAll('.blog-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Add active class to clicked button
+        this.classList.add('active');
+
+        const category = this.dataset.category;
+
+        blogCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
