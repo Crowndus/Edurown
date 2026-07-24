@@ -15,10 +15,10 @@
   --ink-soft: #3d425a;
   --paper: #fbfaf7;
   --paper-alt: #f1efe7;
-  --gold: #a9823d;
-  --gold-deep: #83631f;
-  --gold-tint: #ecdfc0;
-  --line: #e3e0d3;
+  --gold: #2a6f97;          /* Main blue */
+  --gold-deep: #1a4f6f;     /* Darker blue for hover */
+  --gold-tint: #c7e0f0;     /* Light blue tint */
+  --line: #dce4e8;
   --muted: #696e7e;
   --white: #ffffff;
 
