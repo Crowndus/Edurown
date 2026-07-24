@@ -9,66 +9,21 @@
 <link rel="stylesheet" href="css/styles.css">
 
 <style>
-  /* ===== PARALLAX STYLES ===== */
-  .parallax-section {
-    position: relative;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-  }
-
   .parallax-hero {
-    background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?fm=jpg&q=80&w=1600&fit=crop');
+    background: linear-gradient(rgba(23, 27, 43, 0.88), rgba(23, 27, 43, 0.88)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?fm=jpg&q=80&w=1600&fit=crop');
     background-attachment: fixed;
     background-position: center 30%;
     background-size: cover;
     padding: 6.5rem 0;
-    position: relative;
-  }
-
-  .parallax-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(23, 27, 43, 0.88);
-    z-index: 1;
-  }
-
-  .parallax-hero .container {
-    position: relative;
-    z-index: 2;
   }
 
   .parallax-divider {
-    background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=80&w=1600&fit=crop');
+    background: linear-gradient(rgba(23, 27, 43, 0.85), rgba(23, 27, 43, 0.85)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=80&w=1600&fit=crop');
     background-attachment: fixed;
     background-position: center 40%;
     background-size: cover;
     padding: 4rem 0;
     text-align: center;
-    color: #fff;
-    position: relative;
-  }
-
-  .parallax-divider::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(23, 27, 43, 0.75);
-    z-index: 1;
-  }
-
-  .parallax-divider .container {
-    position: relative;
-    z-index: 2;
   }
 
   .parallax-divider h2 {
@@ -78,39 +33,31 @@
   }
 
   .parallax-divider p {
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.8);
     max-width: 600px;
     margin: 0 auto 1.5rem;
     font-size: 1.1rem;
   }
 
-  /* Fallback for browsers that don't support background-attachment: fixed */
   @supports not (background-attachment: fixed) {
-    .parallax-hero {
-      background-attachment: scroll;
-    }
+    .parallax-hero,
     .parallax-divider {
       background-attachment: scroll;
     }
   }
 
-  /* Mobile fix - disable parallax on small screens for performance */
   @media (max-width: 768px) {
-    .parallax-hero {
-      background-attachment: scroll;
-    }
+    .parallax-hero,
     .parallax-divider {
       background-attachment: scroll;
     }
   }
 
-  /* ===== BLOG CARD STYLES ===== */
   .blog-card {
     background: var(--white);
     border: 1px solid var(--line);
     border-radius: var(--r-md);
     overflow: hidden;
-    padding: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
@@ -196,7 +143,6 @@
     gap: 8px;
   }
 
-  /* Coming Soon Card */
   .blog-card-coming {
     opacity: 0.7;
     cursor: default;
@@ -211,7 +157,6 @@
     filter: grayscale(0.6);
   }
 
-  /* ===== CATEGORY FILTER ===== */
   .category-filter {
     display: flex;
     flex-wrap: wrap;
@@ -240,7 +185,6 @@
     border-color: var(--gold);
   }
 
-  /* ===== INTERACTIVE STATS ===== */
   .blog-stats {
     display: flex;
     justify-content: center;
@@ -307,14 +251,12 @@
   </div>
 </header>
 
-<!-- ===== PARALLAX HERO ===== -->
 <section class="parallax-hero">
   <div class="container reveal">
     <div class="eyebrow" style="color:var(--gold-tint);">Blog</div>
     <h1 style="color:#fff;">Expert Advice for Students & Professionals</h1>
     <p class="lead" style="max-width:640px;color:rgba(255,255,255,0.78);">Tips, guides, and insights on academic writing, data analysis, research, and technical projects.</p>
 
-    <!-- Blog Stats -->
     <div class="blog-stats">
       <div class="blog-stat">
         <span class="blog-stat-number">3</span>
@@ -332,7 +274,6 @@
   </div>
 </section>
 
-<!-- ===== CATEGORY FILTER ===== -->
 <section class="section" style="padding-bottom:0;background:var(--paper);">
   <div class="container">
     <div class="category-filter" id="categoryFilter">
@@ -345,12 +286,10 @@
   </div>
 </section>
 
-<!-- ===== BLOG POSTS ===== -->
-<section class="section" style="position:relative;background:var(--paper);padding-top:1rem;">
+<section class="section" style="background:var(--paper);padding-top:1rem;">
   <div class="container">
     <div class="grid grid-2" style="max-width:900px;margin:0 auto;" id="blogGrid">
 
-      <!-- Blog Post 1 -->
       <div class="blog-card reveal" data-category="academic-writing">
         <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?fm=jpg&q=80&w=600&fit=crop" alt="Writing a research paper" class="blog-card-image" loading="lazy">
         <div class="blog-card-content">
@@ -379,7 +318,6 @@
         </div>
       </div>
 
-      <!-- Blog Post 2 -->
       <div class="blog-card reveal" data-category="story">
         <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?fm=jpg&q=80&w=600&fit=crop" alt="Why I built Edurown" class="blog-card-image" loading="lazy">
         <div class="blog-card-content">
@@ -403,12 +341,11 @@
             </span>
           </div>
           <h3 class="blog-card-title"><a href="blog-post-3.html">Why I Built Edurown</a></h3>
-          <p class="blog-card-excerpt">The story behind the platform and why I believe students deserve better than expensive middlemen.</p>
+          <p class="blog-card-excerpt">The story behind the platform and why I believe students deserve better.</p>
           <a href="blog-post-3.html" class="blog-card-readmore">Read More →</a>
         </div>
       </div>
 
-      <!-- Blog Post 3 -->
       <div class="blog-card reveal" data-category="citation">
         <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?fm=jpg&q=80&w=600&fit=crop" alt="Citation guide" class="blog-card-image" loading="lazy">
         <div class="blog-card-content">
@@ -437,7 +374,6 @@
         </div>
       </div>
 
-      <!-- Blog Post 4 (Coming Soon) -->
       <div class="blog-card blog-card-coming reveal" data-category="data-science">
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?fm=jpg&q=80&w=600&fit=crop" alt="Data analysis" class="blog-card-image" loading="lazy">
         <div class="blog-card-content">
@@ -446,14 +382,8 @@
             <span class="blog-card-date" style="color:var(--muted);">Coming Soon</span>
           </div>
           <h3 class="blog-card-title" style="color:var(--muted);">Lung Cancer Data Analysis with Python</h3>
-          <p class="blog-card-excerpt" style="color:var(--muted);">How I processed 10,000+ patient records to analyze treatment outcomes by ethnicity and cancer stage.</p>
-          <span style="color:var(--muted);font-size:0.85rem;display:flex;align-items:center;gap:4px;">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
-              <circle cx="12" cy="12" r="10"/>
-              <polyline points="12 6 12 12 16 14"/>
-            </svg>
-            Coming soon...
-          </span>
+          <p class="blog-card-excerpt" style="color:var(--muted);">Processing 10,000+ patient records to analyze treatment outcomes.</p>
+          <span style="color:var(--muted);font-size:0.85rem;">Coming soon...</span>
         </div>
       </div>
 
@@ -461,11 +391,10 @@
   </div>
 </section>
 
-<!-- ===== PARALLAX DIVIDER ===== -->
 <section class="parallax-divider">
   <div class="container reveal">
     <h2>Knowledge is Power</h2>
-    <p>Every blog post is crafted from real experience, helping students and professionals navigate academic and technical challenges with confidence.</p>
+    <p>Every blog post is crafted from real experience, helping students and professionals navigate academic and technical challenges.</p>
     <a href="contact.html" class="btn btn-gold" style="display:inline-flex;align-items:center;gap:6px;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -477,11 +406,10 @@
   </div>
 </section>
 
-<!-- ===== GET A FREE QUOTE CTA ===== -->
 <section class="section" style="background:var(--paper-alt);padding:3rem 0;text-align:center;">
   <div class="container">
     <h2 style="margin-bottom:0.5rem;">Get a Free Quote</h2>
-    <p class="lead" style="max-width:500px;margin:0 auto 1.5rem;">Tell us about your project and we'll get back to you within 24 hours with a free, no-obligation quote.</p>
+    <p class="lead" style="max-width:500px;margin:0 auto 1.5rem;">Tell us about your project and get a free, no-obligation quote within 24 hours.</p>
     <div class="btn-row" style="justify-content:center;">
       <a href="https://wa.me/254792915655" target="_blank" class="btn btn-gold" style="display:inline-flex;align-items:center;gap:6px;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;">
@@ -543,7 +471,6 @@
 
 <script src="js/script.js"></script>
 
-<!-- ===== CATEGORY FILTER INTERACTIVITY ===== -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.category-filter button');
@@ -551,9 +478,7 @@
 
     filterButtons.forEach(button => {
       button.addEventListener('click', function() {
-        // Remove active class from all buttons
         filterButtons.forEach(btn => btn.classList.remove('active'));
-        // Add active class to clicked button
         this.classList.add('active');
 
         const category = this.dataset.category;
