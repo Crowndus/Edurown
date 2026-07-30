@@ -585,7 +585,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 
 .hero .btn-blue {
-  background: var(--blue, #046fcd);
+  background: var(--ink-soft);
   color: var(--white);
   box-shadow: 0 4px 20px rgba(4, 111, 205, 0.2);
 }
@@ -651,7 +651,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 }
 
 .hero-badges .badge-blue {
-  background: var(--blue, #046fcd);
+  background: var(--ink-soft, #046fcd);
   color: #fff;
 }
 
