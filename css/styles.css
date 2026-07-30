@@ -367,39 +367,273 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   .team-photo { margin: 0 auto; }
 }
 
-/* ---------- Footer ---------- */
+/* ========================================
+   FOOTER — Premium Professional
+   ======================================== */
+
 .footer {
   background: var(--ink);
-  color: rgba(255,255,255,0.6);
-  padding: 3.5rem 0 2rem;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 4.5rem 0 2.5rem;
 }
-.footer .seal-word { color: var(--white); }
+
+.footer .seal-word {
+  color: var(--white);
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.footer .seal-word span {
+  color: var(--gold);
+}
+
+.footer-description {
+  max-width: 320px;
+  line-height: 1.7;
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.45);
+  margin-bottom: 1.25rem;
+}
+
+/* ----- Social Icons ----- */
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.35);
+  transition: all 0.35s ease;
+  padding: 0;
+}
+
+.footer-social a:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(169, 130, 61, 0.25);
+}
+
+.footer-social a svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+}
+
+/* ----- Footer Grid ----- */
 .footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
-  gap: 2.5rem;
+  gap: 3.5rem;
   padding-bottom: 2.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.06);
 }
-@media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* ----- Headings (Bigger + Thicker Gold Underline) ----- */
 .footer h4 {
   font-family: var(--font-display);
-  font-size: 0.78rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 1rem;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.75rem;
 }
-.footer a { display: block; padding: 0.35rem 0; font-size: 0.92rem; }
-.footer a:hover { color: var(--gold-tint); }
+
+.footer h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 44px;
+  height: 3.5px;
+  background: linear-gradient(90deg, var(--gold), #d4a84a, var(--gold));
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(169, 130, 61, 0.3);
+}
+
+/* ----- Navigate Links with Gold Bullets ----- */
+.footer-links-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.25rem 0;
+}
+
+.footer-links-bullets .bullet {
+  color: var(--gold);
+  font-size: 0.55rem;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.footer-links-bullets li:hover .bullet {
+  opacity: 1;
+  transform: scale(1.2);
+  color: var(--gold-tint);
+}
+
+.footer-links-bullets li a {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
+}
+
+.footer-links-bullets li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.footer-links-bullets li a:hover {
+  color: var(--gold-tint);
+  transform: translateX(4px);
+}
+
+.footer-links-bullets li a:hover::after {
+  width: 100%;
+}
+
+/* ----- Contact Links with Icons ----- */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+}
+
+.footer-contact li svg {
+  width: 18px;
+  height: 18px;
+  stroke: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  transition: stroke 0.3s ease, transform 0.3s ease;
+}
+
+.footer-contact li:hover svg {
+  stroke: var(--gold);
+  transform: scale(1.1);
+}
+
+.footer-contact li a,
+.footer-contact li span {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact li a:hover {
+  color: var(--gold-tint);
+}
+
+/* ----- Footer Bottom ----- */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.75rem;
-  padding-top: 1.5rem;
-  font-size: 0.82rem;
+  padding-top: 2rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.footer-bottom::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, rgba(169, 130, 61, 0.15), transparent);
+}
+
+.footer-bottom span:last-child {
+  color: rgba(169, 130, 61, 0.3);
+  letter-spacing: 0.05em;
+}
+
+/* ----- Responsive Adjustments ----- */
+@media (max-width: 500px) {
+  .footer {
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .footer-grid {
+    gap: 1.5rem;
+  }
+
+  .footer h4 {
+    font-size: 0.95rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .footer h4::after {
+    width: 30px;
+    height: 3px;
+  }
+
+  .footer-social a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-social a svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-contact li {
+    padding: 0.3rem 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.25rem;
+    padding-top: 1.5rem;
+  }
 }
 
 /* ---------- Reveal on scroll ---------- */
@@ -442,7 +676,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(169, 130, 61, 0.85);
+  background: #171b2b;
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 10px 16px 10px 12px;
@@ -497,7 +731,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(169, 130, 61, 0.85);
+  background: #171b2b; /* rgba(169, 130, 61, 0.85);*/
   backdrop-filter: blur(10px);
   color: #fff;
   padding: 8px 18px 8px 8px;
