@@ -496,7 +496,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
 
 .hero {
   position: relative;
-  padding: 2rem 0 3rem;
+  padding: 6rem 0 5rem; /* Original top padding restored */
   overflow: hidden;
   background: var(--paper);
 }
@@ -514,7 +514,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
     gap: 2rem;
   }
   .hero {
-    padding: 1.5rem 0 2.5rem;
+    padding: 3rem 0 3rem; /* Adjusted for mobile */
   }
 }
 
