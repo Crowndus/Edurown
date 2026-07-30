@@ -307,35 +307,124 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/254792915655" target="_blank" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.5c0 2.5.7 4.8 1.9 6.8L3 29l6.9-2.2c1.9 1 4.1 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.5S23 3 16 3zm0 22.7c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.3 1.3-4-.3-.4a10.2 10.2 0 01-1.6-5.4C5.5 9.7 10.2 5 16 5s10.5 4.7 10.5 10.5S21.8 25.7 16 25.7zm5.8-7.9c-.3-.2-1.9-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1a8.6 8.6 0 01-2.5-1.5 9.3 9.3 0 01-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6.3-.5c.1-.2 0-.4 0-.5s-.7-1.7-1-2.3-.5-.5-.7-.5h-.6a1.2 1.2 0 00-.9.4A3.6 3.6 0 009 12.4c0 1.3.9 2.6 1.1 2.8s1.8 2.8 4.4 3.9a15 15 0 001.5.5 3.5 3.5 0 001.6.1c.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.4-.3z"/></svg>
-</a>
+<!-- ===== FLOATING ACTION GROUP ===== -->
 
-<button class="faq-toggle" id="faq-toggle" aria-label="Quick questions">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L3 20l1-5.6A8.5 8.5 0 1121 11.5z"/><path d="M9 10h.01M12 10h.01M15 10h.01"/></svg>
-</button>
-<div class="faq-panel" id="faq-panel">
-  <div class="faq-panel-header">
-    <strong>Quick Questions</strong>
-    <button id="faq-close" aria-label="Close">&times;</button>
+<!-- Left Side: FAQ -->
+<div class="floating-left" id="floatingLeft">
+  <button class="floating-faq-btn" id="floatingFaqBtn">
+    <span class="floating-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+    </span>
+    <span class="floating-label">FAQ</span>
+  </button>
+
+  <!-- FAQ Panel -->
+  <div class="floating-faq-panel" id="floatingFaqPanel">
+    <div class="floating-faq-header">
+      <strong>Quick Questions</strong>
+      <button class="floating-faq-close" id="floatingFaqClose">✕</button>
+    </div>
+    <div class="floating-faq-list">
+      <div class="faq-toggle-item">
+        <button class="faq-toggle-btn" data-target="faq1">
+          <span class="faq-toggle-icon">▶</span>
+          Is this a legitimate service?
+        </button>
+        <div class="faq-toggle-content" id="faq1">
+          <p>Yes, you're dealing directly with real, named people. See the About page for background, and feel free to ask for a sample before committing to anything.</p>
+        </div>
+      </div>
+      <div class="faq-toggle-item">
+        <button class="faq-toggle-btn" data-target="faq2">
+          <span class="faq-toggle-icon">▶</span>
+          How does payment work?
+        </button>
+        <div class="faq-toggle-content" id="faq2">
+          <p>Price is agreed directly with you before work starts. Larger projects can be split into milestones.</p>
+        </div>
+      </div>
+      <div class="faq-toggle-item">
+        <button class="faq-toggle-btn" data-target="faq3">
+          <span class="faq-toggle-icon">▶</span>
+          How fast is turnaround?
+        </button>
+        <div class="faq-toggle-content" id="faq3">
+          <p>Depends on scope and deadline, send your brief and you'll get a realistic timeline before agreeing to anything.</p>
+        </div>
+      </div>
+      <div class="faq-toggle-item">
+        <button class="faq-toggle-btn" data-target="faq4">
+          <span class="faq-toggle-icon">▶</span>
+          What if the work isn't right?
+        </button>
+        <div class="faq-toggle-content" id="faq4">
+          <p>Revisions are part of the process until the work matches your brief.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <details class="faq-item">
-    <summary>Is this a legitimate service?</summary>
-    <p>Yes - you're dealing directly with real, named people. See the About page for background, and feel free to ask for a sample before committing to anything.</p>
-  </details>
-  <details class="faq-item">
-    <summary>How does payment work?</summary>
-    <p>Price is agreed directly with you before work starts. Larger projects can be split into milestones.</p>
-  </details>
-  <details class="faq-item">
-    <summary>How fast is turnaround?</summary>
-    <p>Depends on scope and deadline - send your brief and you'll get a realistic timeline before agreeing to anything.</p>
-  </details>
-  <details class="faq-item">
-    <summary>What if the work isn't right?</summary>
-    <p>Revisions are part of the process until the work matches your brief.</p>
-  </details>
-  <a href="https://wa.me/254792915655" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:0.85rem;">Ask on WhatsApp</a>
+</div>
+
+<!-- Right Side: Chat with Crowndus -->
+<div class="floating-right" id="floatingRight">
+  <button class="floating-chat-btn" id="floatingChatBtn">
+    <span class="floating-avatar">
+      <img src="images/about/founder.jpg" alt="Stephen">
+    </span>
+    <span class="floating-label">Chat with Crowndus</span>
+    <span class="floating-status"></span>
+  </button>
+
+  <!-- Chat Panel -->
+  <div class="floating-chat-panel" id="floatingChatPanel">
+    <div class="chat-panel-header">
+      <div class="chat-user-info">
+        <div class="chat-user-avatar">
+          <img src="images/about/founder.jpg" alt="Stephen">
+        </div>
+        <div>
+          <h4>Stephen — "The Crown"</h4>
+          <span class="chat-user-status">🟢 Online · Replies in minutes</span>
+        </div>
+      </div>
+      <button class="chat-panel-close" id="floatingChatClose">✕</button>
+    </div>
+    <div class="chat-panel-body">
+      <div class="chat-msg">
+        <div class="chat-msg-avatar">
+          <img src="images/about/founder.jpg" alt="Stephen">
+        </div>
+        <div class="chat-msg-bubble">
+          <p>Hi there! 👋 I'm Stephen — "The Crown".</p>
+          <p>Need help with a paper, data analysis, or technical project? I'm here to help!</p>
+        </div>
+      </div>
+      <div class="chat-msg chat-msg-auto">
+        <div class="chat-msg-bubble">
+          <p>💡 Send me your topic and I'll send you a <strong>free 300-word sample</strong> — no strings attached.</p>
+        </div>
+      </div>
+    </div>
+    <div class="chat-panel-footer">
+      <a href="https://wa.me/254792915655" target="_blank" class="chat-btn-wa">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.5 8.5 0 01-12.3 7.6L3 20l1-5.6A8.5 8.5 0 1121 11.5z"/>
+        </svg>
+        Chat on WhatsApp
+      </a>
+      <a href="mailto:stephen.crowndus1@gmail.com" class="chat-btn-email">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="M22 7L12 13 2 7"/>
+        </svg>
+        Email
+      </a>
+    </div>
+  </div>
 </div>
 
 <script src="js/script.js"></script>
