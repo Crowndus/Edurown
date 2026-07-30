@@ -1,0 +1,386 @@
+<svg viewBox="0 0 1280 720" width="1280" height="720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#faf8f4"/>
+      <stop offset="100%" stop-color="#f4efe6"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="72%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#046fcd" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#046fcd" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="18%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#a9823d" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#a9823d" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="screenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d84e0"/>
+      <stop offset="55%" stop-color="#046fcd"/>
+      <stop offset="100%" stop-color="#03539c"/>
+    </linearGradient>
+    <linearGradient id="monitorGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0864b6"/>
+      <stop offset="100%" stop-color="#023e70"/>
+    </linearGradient>
+    <linearGradient id="laptopBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbf9f5"/>
+      <stop offset="100%" stop-color="#e8e1d3"/>
+    </linearGradient>
+    <linearGradient id="deskGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eee7d8"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c39a54"/>
+      <stop offset="100%" stop-color="#a9823d"/>
+    </linearGradient>
+    <linearGradient id="goldGradSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d9b473"/>
+      <stop offset="100%" stop-color="#b8905a"/>
+    </linearGradient>
+    <linearGradient id="blazerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d84e0"/>
+      <stop offset="100%" stop-color="#04589f"/>
+    </linearGradient>
+    <linearGradient id="hairGradDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2c1c"/>
+      <stop offset="100%" stop-color="#1c130c"/>
+    </linearGradient>
+    <linearGradient id="hairGradWarm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a3a24"/>
+      <stop offset="100%" stop-color="#3a2415"/>
+    </linearGradient>
+    <linearGradient id="skinGradA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a9714a"/>
+      <stop offset="100%" stop-color="#8a5735"/>
+    </linearGradient>
+    <linearGradient id="skinGradB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0c8a0"/>
+      <stop offset="100%" stop-color="#dba876"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-40%" y="-40%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#2c2010" flood-opacity="0.14"/>
+    </filter>
+    <filter id="cardShadow" x="-40%" y="-40%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2c2010" flood-opacity="0.10"/>
+    </filter>
+    <filter id="tinyShadow" x="-40%" y="-40%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#2c2010" flood-opacity="0.08"/>
+    </filter>
+    <filter id="personShadow" x="-40%" y="-40%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#2c2010" flood-opacity="0.10"/>
+    </filter>
+
+    <clipPath id="monitorClip"><rect x="0" y="0" width="200" height="130" rx="6"/></clipPath>
+    <clipPath id="screenClip"><rect x="0" y="0" width="320" height="176" rx="6"/></clipPath>
+
+    <style>
+      .float-slow { animation: floatY 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .float-med  { animation: floatY 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .float-fast { animation: floatY 3.6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .delay-1 { animation-delay: .4s; }
+      .delay-2 { animation-delay: .8s; }
+      .delay-3 { animation-delay: 1.2s; }
+      .delay-4 { animation-delay: 1.6s; }
+      @keyframes floatY {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+
+      .bar { animation: growUp 1.8s cubic-bezier(.4,0,.2,1) both; transform-box: fill-box; transform-origin: bottom; }
+      @keyframes growUp {
+        0% { transform: scaleY(0); }
+        100% { transform: scaleY(1); }
+      }
+
+      .pulseDot {
+        animation: pulse 2.4s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: center;
+      }
+      @keyframes pulse { 0%,100%{ opacity:.4; transform:scale(1);} 50%{ opacity:1; transform:scale(1.3);} }
+
+      /* Steam — loops properly */
+      .steam {
+        animation: steamRise 3.6s ease-in-out infinite;
+        transform-box: fill-box;
+        transform-origin: bottom center;
+      }
+      .steam.delay-1 { animation-delay: .6s; }
+      .steam.delay-2 { animation-delay: 1.2s; }
+      @keyframes steamRise {
+        0% { transform: translateY(0) scale(1); opacity: .5; }
+        50% { transform: translateY(-8px) scale(1.2); opacity: .8; }
+        100% { transform: translateY(-16px) scale(1.4); opacity: 0; }
+      }
+
+      .nod { animation: nod 4.5s ease-in-out infinite; transform-box: fill-box; transform-origin: bottom center; }
+      @keyframes nod { 0%,100%{ transform: rotate(0deg);} 50%{ transform: rotate(-1.4deg);} }
+
+      .blink { animation: blink 1.4s steps(1) infinite; }
+      @keyframes blink { 0%,45%{opacity:1;} 46%,100%{opacity:0;} }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="url(#bgGrad)"/>
+  <rect width="1280" height="720" fill="url(#glow1)"/>
+  <rect width="1280" height="720" fill="url(#glow2)"/>
+
+  <!-- Soft floor shadow -->
+  <ellipse cx="640" cy="668" rx="600" ry="30" fill="#a9823d" opacity="0.07"/>
+
+  <!-- ============ FLOATING ELEMENTS ============ -->
+
+  <!-- Open book -->
+  <g class="float-slow" transform="translate(70,132) rotate(-7)" filter="url(#tinyShadow)">
+    <path d="M0 42 C 30 22, 68 22, 98 42 L98 92 C 68 72, 30 72, 0 92 Z" fill="#ffffff" stroke="#e6dfd0" stroke-width="2"/>
+    <path d="M98 42 C 128 22, 166 22, 196 42 L196 92 C 166 72, 128 72, 98 92 Z" fill="#ffffff" stroke="#e6dfd0" stroke-width="2"/>
+    <path d="M10 50 C 34 37, 62 37, 88 50" stroke="#046fcd" stroke-width="2.4" fill="none" opacity="0.55"/>
+    <path d="M10 63 C 34 50, 62 50, 88 63" stroke="#046fcd" stroke-width="2.4" fill="none" opacity="0.3"/>
+    <path d="M106 50 C 132 37, 160 37, 186 50" stroke="#a9823d" stroke-width="2.4" fill="none" opacity="0.55"/>
+    <path d="M106 63 C 132 50, 160 50, 186 63" stroke="#a9823d" stroke-width="2.4" fill="none" opacity="0.3"/>
+    <rect x="94" y="30" width="8" height="66" fill="#f0ece2"/>
+  </g>
+
+  <!-- Analytics card -->
+  <g class="float-med delay-1" transform="translate(56,296)" filter="url(#cardShadow)">
+    <rect width="150" height="112" rx="16" fill="#ffffff" stroke="#eee6d6" stroke-width="1.5"/>
+    <text x="16" y="26" font-family="'Segoe UI', Arial, sans-serif" font-size="12.5" fill="#a9823d" font-weight="700">Progress</text>
+    <circle cx="132" cy="21" r="4.6" fill="#5cbf6a"/>
+    <g>
+      <rect class="bar" x="16" y="50" width="14" height="42" rx="4" fill="url(#goldGrad)" opacity="0.85"/>
+      <rect class="bar delay-1" x="38" y="38" width="14" height="54" rx="4" fill="#046fcd" opacity="0.9"/>
+      <rect class="bar delay-2" x="60" y="58" width="14" height="34" rx="4" fill="url(#goldGrad)"/>
+      <rect class="bar delay-3" x="82" y="24" width="14" height="68" rx="4" fill="#046fcd"/>
+      <rect class="bar delay-2" x="104" y="46" width="14" height="46" rx="4" fill="url(#goldGrad)" opacity="0.6"/>
+      <rect class="bar delay-4" x="126" y="32" width="14" height="60" rx="4" fill="#046fcd" opacity="0.75"/>
+    </g>
+  </g>
+
+  <!-- Graduation cap -->
+  <g class="float-fast delay-2" transform="translate(300,74)" filter="url(#tinyShadow)">
+    <polygon points="60,0 120,24 60,48 0,24" fill="#046fcd"/>
+    <polygon points="60,0 120,24 60,48 0,24" fill="#3aa0ea" opacity="0.35"/>
+    <rect x="44" y="24" width="32" height="18" fill="#046fcd"/>
+    <path d="M44 33 C 28 41, 28 58, 44 62 L 76 62 C 92 58, 92 41, 76 33" fill="#03539c"/>
+    <circle cx="112" cy="30" r="4" fill="url(#goldGrad)"/>
+    <line x1="112" y1="30" x2="112" y2="54" stroke="url(#goldGrad)" stroke-width="2"/>
+    <circle cx="112" cy="58" r="5.4" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Crown motif -->
+  <g class="float-slow delay-3" transform="translate(500,40)" opacity="0.95">
+    <polygon points="0,32 11,0 22,19 33,0 44,19 55,0 66,32" fill="none" stroke="url(#goldGrad)" stroke-width="3.2" stroke-linejoin="round"/>
+    <rect x="0" y="32" width="66" height="9" rx="3" fill="url(#goldGrad)"/>
+    <circle cx="11" cy="0" r="3.4" fill="url(#goldGrad)"/>
+    <circle cx="33" cy="0" r="3.4" fill="url(#goldGrad)"/>
+    <circle cx="55" cy="0" r="3.4" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Document card -->
+  <g class="float-med delay-1" transform="translate(1078,72)" filter="url(#cardShadow)">
+    <rect width="118" height="146" rx="16" fill="#ffffff" stroke="#eee6d6" stroke-width="1.5"/>
+    <rect x="15" y="18" width="60" height="9" rx="4.5" fill="#046fcd"/>
+    <rect x="15" y="39" width="88" height="5" rx="2.5" fill="#e6dfd0"/>
+    <rect x="15" y="50" width="88" height="5" rx="2.5" fill="#e6dfd0"/>
+    <rect x="15" y="61" width="66" height="5" rx="2.5" fill="#e6dfd0"/>
+    <rect x="15" y="82" width="88" height="5" rx="2.5" fill="#e6dfd0"/>
+    <rect x="15" y="93" width="88" height="5" rx="2.5" fill="#e6dfd0"/>
+    <rect x="15" y="104" width="52" height="5" rx="2.5" fill="#e6dfd0"/>
+    <circle cx="88" cy="126" r="14.5" fill="url(#goldGrad)" opacity="0.16"/>
+    <path d="M82 126 l4.5 4.5 9 -9" stroke="url(#goldGrad)" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Code snippet card -->
+  <g class="float-fast delay-4" transform="translate(1102,470)" filter="url(#cardShadow)">
+    <rect width="150" height="98" rx="14" fill="#0e2439"/>
+    <circle cx="18" cy="17" r="4.3" fill="#e0645a"/>
+    <circle cx="32" cy="17" r="4.3" fill="#e8c14c"/>
+    <circle cx="46" cy="17" r="4.3" fill="#5cbf6a"/>
+    <text x="15" y="42" font-family="Consolas, monospace" font-size="11.5" fill="#5cd6ff">&lt;/&gt; function</text>
+    <text x="15" y="59" font-family="Consolas, monospace" font-size="11.5" fill="url(#goldGrad)">deliver</text>
+    <text x="15" y="76" font-family="Consolas, monospace" font-size="11.5" fill="#f0ece3">() { done }</text>
+    <circle class="pulseDot" cx="136" cy="17" r="3.8" fill="#5cbf6a"/>
+  </g>
+
+  <!-- Small accent dots -->
+  <g>
+    <circle class="pulseDot delay-1" cx="470" cy="150" r="4" fill="url(#goldGrad)"/>
+    <circle class="pulseDot delay-3" cx="1000" cy="330" r="3.4" fill="#046fcd"/>
+    <circle class="pulseDot delay-2" cx="1035" cy="380" r="3" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- ===================== DESK SCENE ===================== -->
+
+  <!-- Desk surface -->
+  <rect x="90" y="566" width="1100" height="24" rx="6" fill="url(#deskGrad)" filter="url(#softShadow)"/>
+  <rect x="90" y="590" width="1100" height="10" fill="#e6dfd0"/>
+
+  <!-- Plant -->
+  <g class="float-slow" transform="translate(128,498)" filter="url(#tinyShadow)">
+    <path d="M0 42 h46 l-6 30 h-34 Z" fill="url(#goldGrad)"/>
+    <path d="M23 42 C -2 20, 2 -8, 23 1 C 44 -8, 48 20, 23 42 Z" fill="#046fcd" opacity="0.7"/>
+    <path d="M23 36 C 5 18, 7 -2, 23 7 C 39 -2, 41 18, 23 36 Z" fill="#046fcd"/>
+  </g>
+
+  <!-- Second monitor -->
+  <g transform="translate(268,332)" filter="url(#softShadow)">
+    <rect x="-6" y="-6" width="212" height="150" rx="14" fill="#152436"/>
+    <rect x="4" y="4" width="192" height="130" rx="8" fill="url(#monitorGrad)" clip-path="url(#monitorClip)"/>
+    <g clip-path="url(#monitorClip)" transform="translate(4,4)">
+      <rect x="16" y="14" width="108" height="9" rx="4.5" fill="#ffffff" opacity="0.85"/>
+      <rect class="bar" x="24" y="62" width="12" height="32" rx="3" fill="#ffffff" opacity="0.85"/>
+      <rect class="bar delay-1" x="42" y="44" width="12" height="50" rx="3" fill="url(#goldGrad)"/>
+      <rect class="bar delay-2" x="60" y="70" width="12" height="24" rx="3" fill="#ffffff" opacity="0.7"/>
+      <rect class="bar delay-3" x="78" y="30" width="12" height="64" rx="3" fill="url(#goldGrad)"/>
+      <rect class="bar delay-2" x="96" y="54" width="12" height="40" rx="3" fill="#ffffff" opacity="0.55"/>
+      <!-- Static chart line, no disappearing -->
+      <path d="M18 40 C 42 28, 64 46, 88 30 C 106 20, 120 26, 136 22" stroke="#ffffff" stroke-width="2.2" fill="none" opacity="0.7"/>
+    </g>
+    <rect x="90" y="144" width="26" height="22" fill="#152436"/>
+    <rect x="66" y="166" width="74" height="7" rx="3.5" fill="#c9c0ac"/>
+  </g>
+
+  <!-- Laptop -->
+  <g transform="translate(486,362)" filter="url(#softShadow)">
+    <path d="M-40 220 L 382 220 L 363 240 L -21 240 Z" fill="#dcd3bf"/>
+    <path d="M-40 220 L 382 220 L 376 228 L -34 228 Z" fill="url(#laptopBody)"/>
+    <rect x="-21" y="240" width="384" height="8" rx="3" fill="#d0c5ab"/>
+    <path d="M-30 180 L 353 180 L 382 220 L -40 220 Z" fill="url(#laptopBody)"/>
+    <rect x="14" y="192" width="300" height="19" rx="4" fill="#e0d6c1"/>
+    <g fill="#cfc3a9">
+      <rect x="20" y="196" width="7.5" height="7.5" rx="1.4"/><rect x="31" y="196" width="7.5" height="7.5" rx="1.4"/>
+      <rect x="42" y="196" width="7.5" height="7.5" rx="1.4"/><rect x="53" y="196" width="7.5" height="7.5" rx="1.4"/>
+      <rect x="20" y="205" width="7.5" height="3.8" rx="1.1"/><rect x="31" y="205" width="7.5" height="3.8" rx="1.1"/>
+    </g>
+    <rect x="143" y="195" width="56" height="13" rx="4" fill="#d6cbb2"/>
+    <rect x="-11" y="-4" width="327" height="190" rx="12" fill="#152436"/>
+    <rect x="0" y="8" width="305" height="167" rx="6" fill="url(#screenGrad)" clip-path="url(#screenClip)"/>
+    <g clip-path="url(#screenClip)">
+      <rect x="15" y="17" width="124" height="10.5" rx="5" fill="#ffffff" opacity="0.92"/>
+      <rect x="15" y="34" width="274" height="59" rx="10" fill="#ffffff" opacity="0.12"/>
+      <rect x="27" y="46" width="171" height="8.5" rx="4" fill="#ffffff" opacity="0.75"/>
+      <rect x="27" y="60" width="209" height="5.7" rx="2.8" fill="#ffffff" opacity="0.45"/>
+      <rect x="27" y="72" width="133" height="5.7" rx="2.8" fill="#ffffff" opacity="0.45"/>
+      <rect class="blink" x="200" y="46" width="2.3" height="9.5" fill="#ffffff"/>
+      <rect x="15" y="103" width="87" height="57" rx="10" fill="#ffffff" opacity="0.92"/>
+      <rect x="110" y="103" width="87" height="57" rx="10" fill="url(#goldGrad)"/>
+      <rect x="205" y="103" width="87" height="57" rx="10" fill="#ffffff" opacity="0.14"/>
+      <!-- Static chart, no draw animation -->
+      <path d="M122 143 l13 -21 11 13 19 -27 15 19" stroke="#046fcd" stroke-width="2.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="152" cy="131" r="17" fill="none" stroke="#ffffff" stroke-width="2.9" opacity="0.85"/>
+      <path d="M152 114 A 17 17 0 0 1 169 131" stroke="#ffffff" stroke-width="2.9" fill="none" stroke-linecap="round"/>
+    </g>
+    <rect x="124" y="-2" width="23" height="4" rx="2" fill="#0a1622"/>
+  </g>
+
+  <!-- Coffee cup with steam -->
+  <g transform="translate(858,540)" filter="url(#tinyShadow)">
+    <path d="M0 10 h52 l-5.5 43 a9.5 9.5 0 0 1 -9.5 7.5 h-22 a9.5 9.5 0 0 1 -9.5 -7.5 Z" fill="#ffffff" stroke="#e6dfd0" stroke-width="2"/>
+    <ellipse cx="26" cy="10" rx="26" ry="5.5" fill="#0e2439"/>
+    <path d="M52 17 c16 -4 16 22 0 20" fill="none" stroke="url(#goldGrad)" stroke-width="3.8"/>
+    <!-- Steam lines loop properly -->
+    <path class="steam" d="M15 6 c-4 -7 3.5 -9 1.8 -16.5" fill="none" stroke="#a9823d" stroke-width="2.4" stroke-linecap="round"/>
+    <path class="steam delay-1" d="M22 6 c-4 -7 3.5 -9 1.8 -16.5" fill="none" stroke="#a9823d" stroke-width="2.4" stroke-linecap="round"/>
+    <path class="steam delay-2" d="M29 6 c-4 -7 3.5 -9 1.8 -16.5" fill="none" stroke="#a9823d" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Books stack -->
+  <g transform="translate(680,552)" filter="url(#tinyShadow)">
+    <rect x="0" y="20" width="90" height="16" rx="3.4" fill="#046fcd"/>
+    <rect x="6" y="4" width="78" height="16" rx="3.4" fill="url(#goldGrad)"/>
+    <rect x="0" y="-11" width="58" height="15" rx="3.4" fill="#ffffff" stroke="#e6dfd0" stroke-width="2"/>
+  </g>
+
+  <!-- small side table item -->
+  <g transform="translate(1030,556)" filter="url(#tinyShadow)">
+    <rect width="36" height="34" rx="6" fill="#ffffff" stroke="#e6dfd0" stroke-width="2"/>
+    <path d="M8 22 h20 M8 14 h20" stroke="#046fcd" stroke-width="2.4" opacity="0.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===================== PERSON 1 — seated ===================== -->
+  <g transform="translate(596,232)" filter="url(#personShadow)">
+    <path d="M-34 44 C -34 -44, 130 -44, 130 44 L 134 258 L -38 258 Z" fill="#eee6d6" opacity="0.45"/>
+    <path d="M8 188 C 8 145, 30 114, 60 114 C 92 114, 113 145, 115 188 L 121 258 L 2 258 Z" fill="url(#blazerGrad)"/>
+    <path d="M8 188 C 8 145, 30 114, 60 114 C 62 114, 64 114, 66 115 L 40 200 Z" fill="#3aa0ea" opacity="0.4"/>
+    <path d="M115 188 C 113 152, 98 124, 76 116 L 90 206 Z" fill="#03539c" opacity="0.5"/>
+    <path d="M47 122 L 60 145 L 74 122 L 64 117 L 60 128 L 56 117 Z" fill="#f8f6f2"/>
+    <path d="M49 124 L 40 197" stroke="#03539c" stroke-width="2" opacity="0.5" fill="none"/>
+    <path d="M72 124 L 82 197" stroke="#03539c" stroke-width="2" opacity="0.5" fill="none"/>
+    <path d="M20 148 C -3 163, -13 189, -9 204 C -5 217, 29 224, 47 216 L 41 195 C 29 199, 10 195, 12 184 C 14 174, 29 165, 33 154 Z" fill="url(#blazerGrad)"/>
+    <path d="M102 148 C 127 161, 139 184, 133 202 C 129 215, 94 222, 76 214 L 82 192 C 94 196, 113 191, 111 181 C 109 171, 94 163, 90 153 Z" fill="url(#blazerGrad)"/>
+    <ellipse cx="43" cy="217" rx="12" ry="9.2" fill="url(#skinGradA)"/>
+    <ellipse cx="82" cy="216" rx="12" ry="9.2" fill="url(#skinGradA)"/>
+    <rect x="51" y="100" width="19" height="23" rx="7.5" fill="url(#skinGradA)"/>
+    <path d="M51 115 C 57 121, 64 121, 70 115 L 70 123 C 64 127, 57 127, 51 123 Z" fill="#6f4527" opacity="0.4"/>
+    <ellipse cx="61" cy="76" rx="34" ry="36" fill="url(#skinGradA)"/>
+    <ellipse cx="26" cy="78" rx="4.8" ry="7.6" fill="url(#skinGradA)"/>
+    <ellipse cx="96" cy="78" rx="4.8" ry="7.6" fill="url(#skinGradA)"/>
+    <path d="M26 68 C 22 34, 40 12, 61 12 C 84 12, 100 34, 96 66 C 92 50, 84 42, 61 42 C 40 42, 30 54, 26 68 Z" fill="url(#hairGradDark)"/>
+    <g fill="url(#hairGradDark)" opacity="0.95">
+      <circle cx="34" cy="24" r="4.4"/><circle cx="44" cy="16" r="4.6"/><circle cx="55" cy="12" r="4.8"/>
+      <circle cx="67" cy="12" r="4.8"/><circle cx="78" cy="16" r="4.6"/><circle cx="88" cy="24" r="4.4"/>
+      <circle cx="30" cy="34" r="4.2"/><circle cx="92" cy="34" r="4.2"/>
+    </g>
+    <path d="M28 40 C 22 46, 20 54, 24 62" stroke="#1c130c" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M94 40 C 100 46, 102 54, 98 62" stroke="#1c130c" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M32 88 C 38 104, 50 112, 61 112 C 72 112, 84 104, 90 88 C 86 100, 74 108, 61 108 C 48 108, 36 100, 32 88 Z" fill="#3a2c1c" opacity="0.16"/>
+    <ellipse cx="47" cy="78" rx="3.5" ry="4.3" fill="#241a10"/>
+    <ellipse cx="75" cy="78" rx="3.5" ry="4.3" fill="#241a10"/>
+    <ellipse cx="48.2" cy="76.6" rx="1.05" ry="1.25" fill="#ffffff" opacity="0.85"/>
+    <ellipse cx="76.2" cy="76.6" rx="1.05" ry="1.25" fill="#ffffff" opacity="0.85"/>
+    <path d="M40 69 C 43 66, 49 66, 52 69" stroke="#241a10" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+    <path d="M70 69 C 73 66, 79 66, 82 69" stroke="#241a10" stroke-width="2.1" fill="none" stroke-linecap="round"/>
+    <path d="M60 82 C 61 87, 61 89, 58 91" stroke="#6f4527" stroke-width="1.9" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M55 98 C 59 102, 65 102, 69 98" stroke="#5c3a22" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===================== PERSON 2 — standing ===================== -->
+  <g transform="translate(852,96)" filter="url(#personShadow)">
+    <path d="M6 470 L -2 250 C -4 190, 20 148, 58 148 C 96 148, 122 190, 120 250 L 116 470 Z" fill="url(#goldGrad)"/>
+    <path d="M6 470 L -2 250 C -4 200, 12 164, 34 152 L 20 300 Z" fill="url(#goldGradSoft)" opacity="0.55"/>
+    <path d="M120 250 C 122 195, 100 154, 78 149 L 92 300 Z" fill="#8a6a35" opacity="0.4"/>
+    <path d="M44 156 L 58 182 L 72 156 L 62 150 L 58 163 L 54 150 Z" fill="#f8f6f2"/>
+    <path d="M46 158 L 36 250" stroke="#8a6a35" stroke-width="2" opacity="0.4" fill="none"/>
+    <path d="M70 158 L 80 250" stroke="#8a6a35" stroke-width="2" opacity="0.4" fill="none"/>
+    <path d="M8 190 C -14 210, -22 250, -16 290 C -10 320, 4 336, 20 332 L 22 300 C 10 300, 2 284, 4 262 C 6 236, 16 214, 26 198 Z" fill="url(#goldGrad)"/>
+    <g transform="translate(-30,290) rotate(-8)">
+      <rect x="0" y="0" width="46" height="60" rx="6" fill="#152436"/>
+      <rect x="4" y="5" width="38" height="48" rx="2" fill="url(#screenGrad)"/>
+      <rect x="9" y="12" width="28" height="5" rx="2.5" fill="#ffffff" opacity="0.8"/>
+      <rect x="9" y="22" width="20" height="4" rx="2" fill="#ffffff" opacity="0.5"/>
+      <rect x="9" y="30" width="24" height="16" rx="3" fill="url(#goldGrad)" opacity="0.85"/>
+    </g>
+    <ellipse cx="0" cy="330" rx="11.5" ry="9" fill="url(#skinGradB)"/>
+    <path d="M110 188 C 134 176, 156 156, 168 132 C 176 116, 172 104, 160 102 C 150 100, 140 112, 132 128 C 122 148, 108 168, 96 180 Z" fill="url(#goldGrad)"/>
+    <ellipse cx="167" cy="106" rx="11" ry="9.5" fill="url(#skinGradB)"/>
+    <path d="M176 100 l10 -6" stroke="url(#skinGradB)" stroke-width="6" stroke-linecap="round"/>
+    <rect x="46" y="126" width="20" height="26" rx="8" fill="url(#skinGradB)"/>
+    <path d="M46 143 C 52 149, 60 149, 66 143 L 66 151 C 60 155, 52 155, 46 151 Z" fill="#c98f5e" opacity="0.35"/>
+    <ellipse cx="56" cy="96" rx="35" ry="37" fill="url(#skinGradB)"/>
+    <ellipse cx="20" cy="98" rx="4.9" ry="7.8" fill="url(#skinGradB)"/>
+    <ellipse cx="92" cy="98" rx="4.9" ry="7.8" fill="url(#skinGradB)"/>
+    <path d="M20 92 C 12 46, 34 20, 56 20 C 80 20, 102 46, 94 90 C 90 68, 80 54, 56 54 C 36 54, 24 66, 20 92 Z" fill="url(#hairGradWarm)"/>
+    <path d="M18 88 C 6 120, 8 160, 22 190 C 28 200, 34 202, 36 196 C 24 172, 20 140, 26 100 Z" fill="url(#hairGradWarm)"/>
+    <path d="M94 88 C 106 118, 106 156, 94 184 C 89 195, 82 198, 80 192 C 92 168, 94 138, 88 100 Z" fill="url(#hairGradWarm)"/>
+    <path d="M30 34 C 40 24, 74 24, 86 36" stroke="#2e1c10" stroke-width="3" fill="none" opacity="0.4"/>
+    <path d="M22 96 C 30 92, 40 92, 46 98" stroke="#2e1c10" stroke-width="2.2" fill="none" opacity="0.35" stroke-linecap="round"/>
+    <ellipse cx="42" cy="98" rx="3.6" ry="4.4" fill="#241a10"/>
+    <ellipse cx="70" cy="98" rx="3.6" ry="4.4" fill="#241a10"/>
+    <ellipse cx="43.2" cy="96.6" rx="1.1" ry="1.3" fill="#ffffff" opacity="0.85"/>
+    <ellipse cx="71.2" cy="96.6" rx="1.1" ry="1.3" fill="#ffffff" opacity="0.85"/>
+    <path d="M35 89 C 38 86, 44 86, 47 89" stroke="#241a10" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M65 89 C 68 86, 74 86, 77 89" stroke="#241a10" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+    <path d="M55 102 C 56 107, 56 109, 53 111" stroke="#c98f5e" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M48 118 C 52 123, 60 123, 64 118" stroke="#b06f45" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="33" cy="108" rx="6.2" ry="4" fill="#e8a878" opacity="0.32"/>
+    <ellipse cx="79" cy="108" rx="6.2" ry="4" fill="#e8a878" opacity="0.32"/>
+    <circle cx="20" cy="106" r="2.2" fill="url(#goldGrad)"/>
+  </g>
+
+  <!-- Brand wordmark -->
+  <text x="640" y="694" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" letter-spacing="6" fill="url(#goldGrad)" font-weight="700">EDUROWN</text>
+  <rect x="580" y="702" width="120" height="2.4" fill="url(#goldGrad)" opacity="0.6"/>
+</svg>
