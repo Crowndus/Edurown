@@ -14,7 +14,7 @@ Edurown was built to cut through the opaque middleman chain that exists on platf
 
 ## 🖼️ Preview
 
-![Edurown workspace preview](src/assets/hero-workspace.jpg)
+<img src="src/assets/hero-workspace.jpg" alt="Edurown workspace preview" width="320" />
 
 ---
 
@@ -70,15 +70,15 @@ edurown/
 
 | Homepage | About |
 | :---: | :---: |
-| ![Homepage](screenshots/homepage.jpg) | ![About](screenshots/about.jpg) |
+| <img src="screenshots/homepage.jpg" width="380" /> | <img src="screenshots/about.jpg" width="380" /> |
 
 | Services | Pricing |
 | :---: | :---: |
-| ![Services](screenshots/services.jpg) | ![Pricing](screenshots/pricing.jpg) |
+| <img src="screenshots/services.jpg" width="380" /> | <img src="screenshots/pricing.jpg" width="380" /> |
 
 | Contact |
 | :---: |
-| ![Contact](screenshots/contact.jpg) |
+| <img src="screenshots/contact.jpg" width="380" /> |
 
 Full page screenshots — reshoot and replace these anytime the design changes so they don't go stale.
 
