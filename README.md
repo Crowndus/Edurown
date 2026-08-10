@@ -14,7 +14,7 @@ Edurown was built to cut through the opaque middleman chain that exists on platf
 
 ## 🖼️ Preview
 
-<img src="src/assets/hero-workspace.jpg" alt="Edurown workspace preview" width="320" />
+<img src="screenshots/preview-banner.jpg" alt="Edurown workspace preview" width="100%" />
 
 ---
 
