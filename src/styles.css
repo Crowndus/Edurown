@@ -1,0 +1,386 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Edurown design system — ink navy + brass gold on warm paper.
+ * Premium, editorial, academic. Gold is the single brand accent for
+ * CTAs, links, and underlines; feature icons use their own small
+ * accent-color palette (defined per component) to stay legible and
+ * inviting without diluting the gold identity.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-display: "Poppins", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-gold-tint: var(--gold-tint);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-foreground: var(--ink-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+
+  --shadow-card: 0 1px 3px rgb(23 27 43 / 7%), 0 10px 30px -14px rgb(23 27 43 / 12%);
+  --shadow-lift: 0 10px 30px rgb(23 27 43 / 10%), 0 30px 70px -30px rgb(23 27 43 / 18%);
+  --shadow-cta: 0 12px 26px -12px rgb(23 27 43 / 45%);
+  --shadow-gold: 0 10px 24px -12px rgb(111 82 32 / 45%);
+}
+
+:root {
+  --radius: 0.875rem;
+
+  --background: #ffffff;
+  --foreground: #171b2b;
+
+  --surface: #fbfaf7;
+  --surface-2: #f1efe7;
+
+  --card: #ffffff;
+  --card-foreground: #171b2b;
+  --popover: #ffffff;
+  --popover-foreground: #171b2b;
+
+  /* brass gold — the single brand accent, used for links, icons that
+     need to match the brand, and small badges */
+  --primary: #6f5220;
+  --primary-foreground: #ffffff;
+  --primary-soft: #ecdfc0;
+
+  --secondary: #f1efe7;
+  --secondary-foreground: #3d425a;
+
+  --muted: #f6f5f0;
+  --muted-foreground: #696e7e;
+
+  --accent: #8d692f;
+  --accent-foreground: #ffffff;
+  --accent-soft: #ecdfc0;
+
+  /* brass gold — the action colour: CTA buttons, footer accents, seals */
+  --gold: #8d692f;
+  --gold-deep: #6f5220;
+  --gold-tint: #ecdfc0;
+
+  --highlight: #8d692f;
+  --highlight-foreground: #6f5220;
+
+  /* deep ink navy panels — header on scroll, footer, dark CTA sections */
+  --ink: #171b2b;
+  --ink-soft: #3d425a;
+  --ink-foreground: #f7f6f2;
+
+
+  --destructive: #c0392b;
+  --destructive-foreground: #ffffff;
+
+  --border: #e3e0d3;
+  --input: #e3e0d3;
+  --ring: #8d692f;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 78rem;
+  padding-inline: 1.25rem;
+}
+
+@utility surface-band {
+  background-color: var(--color-surface);
+}
+
+@utility mint-band {
+  background: linear-gradient(180deg, var(--color-surface-2), var(--color-surface));
+}
+
+@utility hero-glow {
+  background:
+    radial-gradient(58rem 32rem at 8% -16%, var(--color-gold-tint), transparent 62%),
+    radial-gradient(42rem 30rem at 100% 6%, #e7edfa, transparent 58%),
+    radial-gradient(36rem 26rem at 90% 92%, #eef4e4, transparent 60%),
+    var(--color-surface);
+}
+
+/* Thick gold underline that grows from the centre — nav links */
+@utility nav-underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--color-gold);
+    transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  &:hover::after {
+    width: 70%;
+  }
+}
+
+@utility nav-underline-active {
+  &::after {
+    width: 70%;
+  }
+}
+
+@utility marquee-anim {
+  animation: marquee-scroll 38s linear infinite;
+}
+
+@utility pulse-dot {
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgb(46 204 113 / 60%);
+  }
+  50% {
+    opacity: 0.65;
+    box-shadow: 0 0 0 6px rgb(46 204 113 / 0%);
+  }
+}
+
+/* ==========================================================================
+   Motion system — page load + scroll reveal transitions.
+   Everything here degrades to an instant, static state under
+   prefers-reduced-motion, and never affects layout (opacity + transform
+   only), so it never shifts content or blocks interaction.
+   ========================================================================== */
+
+:root {
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Top navigation progress bar shown during route transitions */
+.route-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 2.5px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-gold-tint), var(--color-gold) 55%, var(--color-gold-deep));
+  box-shadow: 0 0 12px rgb(141 105 47 / 55%);
+  opacity: 0;
+  transition: width 0.4s var(--ease-premium), opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.route-progress[data-state="loading"] {
+  opacity: 1;
+}
+
+.route-progress[data-state="done"] {
+  width: 100% !important;
+  opacity: 0;
+  transition: width 0.3s var(--ease-premium), opacity 0.5s ease 0.15s;
+}
+
+/* Whole-page fade/lift shown once on first load, and briefly on each route change */
+.route-fade {
+  animation: route-fade-in 0.6s var(--ease-premium) both;
+}
+
+@keyframes route-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero / above-the-fold load-in — staggered via utility classes */
+.load-in {
+  animation: load-in-up 0.9s var(--ease-premium) both;
+}
+
+.load-in-1 {
+  animation-delay: 0.05s;
+}
+.load-in-2 {
+  animation-delay: 0.16s;
+}
+.load-in-3 {
+  animation-delay: 0.27s;
+}
+.load-in-4 {
+  animation-delay: 0.38s;
+}
+.load-in-5 {
+  animation-delay: 0.49s;
+}
+
+@keyframes load-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.load-in-scale {
+  animation: load-in-scale 1.1s var(--ease-premium) both;
+  animation-delay: 0.18s;
+}
+
+@keyframes load-in-scale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Subtle, slow settle applied to the hero photo itself */
+.photo-settle {
+  animation: photo-settle 1.4s var(--ease-premium) both;
+  animation-delay: 0.15s;
+}
+
+@keyframes photo-settle {
+  from {
+    opacity: 0;
+    transform: scale(1.06);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Scroll-triggered reveals — toggled by ScrollReveal via IntersectionObserver */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s var(--ease-premium),
+    transform 0.8s var(--ease-premium);
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.65s var(--ease-premium),
+    transform 0.65s var(--ease-premium);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-section.is-visible .reveal-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .route-progress,
+  .route-fade,
+  .load-in,
+  .load-in-scale,
+  .photo-settle,
+  .reveal-section,
+  .reveal-item {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

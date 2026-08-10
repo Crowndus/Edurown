@@ -12,6 +12,12 @@ Edurown was built to cut through the opaque middleman chain that exists on platf
 
 ---
 
+## 🖼️ Preview
+
+![Edurown workspace preview](src/assets/hero-workspace.jpg)
+
+---
+
 ## 🚀 Features
 
 - **📝 Academic Writing:** Essays, research papers, dissertations, case studies, and term papers
@@ -20,6 +26,7 @@ Edurown was built to cut through the opaque middleman chain that exists on platf
 - **🔬 Lab & Technical Reports:** Bioimage analysis, cybersecurity reports, and more
 - **✏️ Editing & Proofreading:** Line-by-line review for clarity, grammar, and citations
 - **🌍 Worldwide Service:** Comfortable working across time zones and formatting standards
+- **✨ Premium motion:** Sitewide scroll-reveal and page-load transitions, with a `prefers-reduced-motion` fallback
 
 ---
 
@@ -27,44 +34,40 @@ Edurown was built to cut through the opaque middleman chain that exists on platf
 
 | **Category** | **Technologies** |
 | :--- | :--- |
-| **Frontend** | HTML5, CSS3, JavaScript |
+| **Framework** | React 19, TanStack Start (SSR), TanStack Router, TanStack Query |
+| **Styling** | Tailwind CSS v4, shadcn/ui (Radix primitives) |
+| **Build** | Vite, Nitro |
+| **Icons** | lucide-react |
 | **Hosting** | Vercel |
-| **Design System** | Custom CSS with Inter & Poppins fonts |
 | **Version Control** | Git & GitHub |
+
+This is a rebuild of the original static HTML/CSS/JS site on a proper component-based, server-rendered stack — same content and brand, new foundation.
 
 ---
 
 ## 📁 Project Structure
 
+```
 edurown/
-├── index.html # Homepage
-├── about.html # About page
-├── services.html # Services page
-├── pricing.html # Pricing page
-├── contact.html # Contact page
-├── css/
-│ └── styles.css # Main stylesheet
-├── js/
-│ └── script.js # JavaScript functionality
-├── images/
-│ └── about/
-│ └── founder.jpg # Founder's photo
-├── vercel.json # Vercel deployment config
-└── README.md # This file
-
+├── src/
+│   ├── routes/            # File-based routes (/, /about, /services, /pricing, /contact, /blog/*)
+│   ├── components/
+│   │   ├── site/          # Header, Footer, Hero, Blocks, ScrollReveal, RouteProgress, etc.
+│   │   └── ui/             # shadcn/ui primitives
+│   ├── data/               # Site copy, services, testimonials, blog posts
+│   ├── assets/              # Images (hero photo, founder photo, etc.)
+│   ├── hooks/ / lib/         # Shared hooks and utilities
+│   └── styles.css            # Design tokens + Tailwind theme
+├── public/                    # Favicon, robots.txt
+├── vite.config.ts
+└── package.json
+```
 
 ---
 
-## 📸 Screenshots
+## 📸 Live Preview / Screenshots
 
-### Homepage
-![Homepage](screenshots/homepage.png)
-
-### About Page
-![About Page](screenshots/about.png)
-
-### Pricing Page
-![Pricing Page](screenshots/pricing.png)
+Full-page screenshots of every route (Home, About, Services, Pricing, Contact, Blog) aren't checked into this repo — grab fresh ones from the live site above any time the design changes, so they never go stale.
 
 ---
 
@@ -72,30 +75,33 @@ edurown/
 
 ### Prerequisites
 
-- A web browser
-- A code editor (VS Code recommended)
+- Node.js 20+
+- npm (or bun)
 
 ### Local Development
 
-1. Clone the repository
-
+```bash
 git clone https://github.com/Crowndus/Edurown.git
 cd Edurown
+npm install
+npm run dev
+```
 
+### Build
 
-2. Open in your browser
-- Simply open `index.html` in your browser
-
-3. Make changes
-- Edit the HTML files for content changes
-- Modify `css/styles.css` for styling
+```bash
+npm run build
+npm run preview
+```
 
 ### Deploy to Vercel
 
+Vercel is connected to this GitHub repo, so pushing to the deployed branch redeploys automatically. Vercel auto-detects the Nitro build output — no extra configuration needed. If a fresh import is ever required:
+
 1. Push your changes to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Click "Add New Project" → Import your GitHub repository
-4. Click "Deploy"
+2. Go to [vercel.com](https://vercel.com) → **Add New Project** → import this repository
+3. Framework Preset: leave on auto-detect (or "Other") — Build Command `npm run build`, Install Command `npm install`
+4. Click **Deploy**
 
 ---
 
