@@ -59,6 +59,7 @@ edurown/
 │   ├── hooks/ / lib/         # Shared hooks and utilities
 │   └── styles.css            # Design tokens + Tailwind theme
 ├── public/                    # Favicon, robots.txt
+├── screenshots/                # README preview images (Home, About, Services, Pricing, Contact)
 ├── vite.config.ts
 └── package.json
 ```
@@ -67,7 +68,19 @@ edurown/
 
 ## 📸 Live Preview / Screenshots
 
-Full-page screenshots of every route (Home, About, Services, Pricing, Contact, Blog) aren't checked into this repo — grab fresh ones from the live site above any time the design changes, so they never go stale.
+| Homepage | About |
+| :---: | :---: |
+| ![Homepage](screenshots/homepage.jpg) | ![About](screenshots/about.jpg) |
+
+| Services | Pricing |
+| :---: | :---: |
+| ![Services](screenshots/services.jpg) | ![Pricing](screenshots/pricing.jpg) |
+
+| Contact |
+| :---: |
+| ![Contact](screenshots/contact.jpg) |
+
+Full page screenshots — reshoot and replace these anytime the design changes so they don't go stale.
 
 ---
 
@@ -108,7 +121,7 @@ Vercel is connected to this GitHub repo, so pushing to the deployed branch redep
 ## 📫 Contact
 
 - **Website:** [edurown.vercel.app](https://edurown.vercel.app)
-- **Email:** stephen.kisangi1@gmail.com
+- **Email:** stephen.crowndus1@gmail.com
 - **WhatsApp:** [+254 792 915655](https://wa.me/254792915655)
 - **GitHub:** [Crowndus](https://github.com/Crowndus)
 
