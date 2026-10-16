@@ -7,7 +7,7 @@ import { CONTACT } from "@/data/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Edurown — Direct Academic Support, No Middlemen" },
+      { title: "About Edurown — A Digital Solutions Studio" },
       {
         name: "description",
         content:
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/about")({
       {
         property: "og:description",
         content:
-          "Meet the people behind Edurown, direct, personal academic and technical writing support for clients abroad.",
+          "Meet the people behind Edurown, building practical digital experiences for businesses, educators, and teams worldwide.",
       },
     ],
   }),
@@ -37,8 +37,8 @@ const VALUES = [
   },
   {
     icon: FileCheck,
-    title: "Original, Careful Work",
-    body: "Every piece is researched and written from scratch, matched to your exact brief.",
+    title: "Thoughtful, Useful Work",
+    body: "Every solution is shaped around your goals, constraints, audience, and intended use.",
   },
 ];
 
@@ -48,7 +48,7 @@ const TEAM = [
     alt: "Stephen, founder and lead researcher at Edurown",
     role: "Founder",
     name: 'Stephen — "The Crown"',
-    bio: "A Kenya-based IT and AI consultant who founded Edurown to give students and professionals abroad direct access to careful, well-researched web, automation, education technology, and data projects. He holds a First-Class Honours degree in Information Technology and has been admitted to Carnegie Mellon University Africa's Master's program in Engineering AI for Fall 2026. Since 2024 he's worked as a freelance IT and AI consultant, handling research, data analysis, and technical writing for clients internationally, bringing that same direct, hands-on approach to every Edurown project.",
+    bio: "A Kenya-based IT professional and digital builder who founded Edurown to help organisations turn ideas and operational challenges into useful digital solutions. He holds a First-Class Honours degree in Information Technology and has been admitted to Carnegie Mellon University Africa's Master's program in Engineering AI for Fall 2026. Since 2024 he's worked as a freelance IT and AI consultant, handling research, data analysis, and technical writing for clients internationally, bringing that same direct, hands-on approach to every Edurown project.",
     cta: { label: "Connect with Stephen", href: CONTACT.whatsapp },
   },
 ];
@@ -58,8 +58,8 @@ function About() {
     <>
       <PageHero
         eyebrow="About Edurown"
-        title="Direct academic support, no middlemen."
-        lead="Edurown connects you directly with the person doing the work, no call centers, no anonymous bidding pools. Just clear communication, careful research, and full confidentiality from start to finish."
+        title="A hands-on digital partner for practical problems."
+        lead="Edurown is a digital solutions studio helping businesses, educators, and growing teams improve how they show up online and get work done. We focus on useful websites, practical automation, education technology, design, and data support — with direct communication from discovery to handover."
       />
 
       <section className="py-16 md:py-20">
