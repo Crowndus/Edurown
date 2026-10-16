@@ -289,71 +289,25 @@ function Index() {
         </div>
       </section>
 
-      {/* Caution / due diligence */}
+      {/* Project approach */}
       <section className="surface-band border-y border-border py-16 md:py-20">
         <div className="container-page grid items-start gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <div>
-            <SectionHead
-              eyebrow="New Here?"
-              title="Reasonable to be careful. Here's how to check."
-              lead="A little caution online is fair, plenty of services out there aren't reliable. Before committing to anything, you're welcome to:"
-            />
+            <SectionHead eyebrow="A good starting point" title="Let's solve the right problem first." lead="You don't need a perfect technical brief to get started. Tell us what isn't working, what you'd like to improve, and what a useful result would look like." />
             <ul className="mt-7 space-y-3">
-              {CAUTION_POINTS.map((c) => (
-                <li key={c} className="flex items-start gap-3 text-sm leading-relaxed">
+              {["A short conversation to understand your goals", "A clear scope, timeline, and quote before work begins", "Review points and a practical handover at the end"].map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm leading-relaxed">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                  <span>{c}</span>
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={CONTACT.whatsapp}
-                className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-bold text-ink-foreground shadow-cta"
-              >
-                Ask for a Sample
-              </a>
-              <Link
-                to="/pricing"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-bold shadow-card"
-              >
-                See Pricing
-              </Link>
+              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-bold text-ink-foreground shadow-cta">Discuss a Project</Link>
+              <Link to="/pricing" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-bold shadow-card">View Starting Prices</Link>
             </div>
           </div>
           <FounderCard />
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 md:py-20">
-        <div className="container-page">
-          <SectionHead
-            eyebrow="Testimonials"
-            title="Real results from real students"
-            lead="Direct feedback from clients who worked with Stephen personally."
-            center
-          />
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
-            {TESTIMONIALS.map((t) => (
-              <figure
-                key={t.name}
-                className="rounded-2xl border border-border bg-card p-7 shadow-card"
-              >
-                <div className="flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-highlight text-highlight" />
-                  ))}
-                </div>
-                <Quote className="mt-5 h-6 w-6 text-primary/50" />
-                <blockquote className="mt-3 text-base leading-relaxed">{t.quote}</blockquote>
-                <figcaption className="mt-6 border-t border-border pt-4">
-                  <strong className="block text-sm font-bold">{t.name}</strong>
-                  <span className="text-sm text-muted-foreground">{t.role}</span>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -363,7 +317,7 @@ function Index() {
           <SectionHead
             eyebrow="Selected work"
             title="Work that speaks for itself"
-            lead="A glimpse into the kind of technical and academic work Stephen handles."
+            lead="A selection of technical work and applied problem-solving. More case studies can be added as new client work is published."
             center
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2">
@@ -399,7 +353,7 @@ function Index() {
               How we protect you
             </span>
             <h2 className="mt-4 font-display text-2xl font-semibold leading-snug md:text-3xl">
-              We're not a faceless platform, so we built safeguards:
+              A clear, collaborative process from start to handover:
             </h2>
             <ul className="mt-7">
               {SAFEGUARDS.map((s) => (
@@ -419,13 +373,10 @@ function Index() {
 
           <div className="space-y-6">
             <p className="text-base leading-relaxed text-ink-foreground/75">
-              If a big platform with buyer protection feels safer, we genuinely understand. But if
-              you're tired of inflated prices for work farmed out through layers of middlemen,
-              you're exactly where you need to be.
+              Every project starts with understanding the need and agreeing on a realistic plan. We keep communication direct, make decisions visible, and focus on solutions that are useful after handover.
             </p>
             <blockquote className="border-l-4 border-gold pl-6 font-display text-lg font-medium leading-relaxed text-ink-foreground">
-              "Ever wonder why your $100 order gets fulfilled for just $7 on writer dashboards?
-              That gap is eaten by middlemen. Edurown cuts them out."
+              "Good digital work starts with a clear problem, a shared plan, and direct communication."
             </blockquote>
             <div className="flex flex-wrap gap-5 text-sm font-semibold">
               <Link to="/pricing" className="text-gold hover:underline">
@@ -436,7 +387,7 @@ function Index() {
               </Link>
             </div>
             <p className="text-base font-medium italic text-ink-foreground/70">
-              "Careful, original work, matched to your brief, every time."
+              "Practical solutions, built around your goals."
             </p>
           </div>
 
@@ -444,8 +395,8 @@ function Index() {
       </section>
 
       <QuoteCta
-        title="Get a Free Quote"
-        lead="Tell us about your project and we'll get back to you within 24 hours with a free, no-obligation quote."
+        title="Tell us what you want to build"
+        lead="Share your goals and requirements. We'll discuss the right scope and provide a clear, no-obligation quote."
       />
 
       <section className="surface-band border-t border-border py-16 md:py-20">
