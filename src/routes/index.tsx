@@ -44,13 +44,13 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Edurown — Direct Academic & Technical Writing Support" },
+      { title: "Edurown — Digital Solutions for Growing Businesses" },
       {
         name: "description",
         content:
-          "Work one-on-one with a Carnegie Mellon-admitted engineer for essays, research papers, dissertations, data analysis, and technical projects. No middlemen.",
+          "Edurown builds modern websites, practical AI automations, education technology, digital brands, and data solutions for organisations worldwide.",
       },
-      { property: "og:title", content: "Edurown — Direct Academic & Technical Writing Support" },
+      { property: "og:title", content: "Edurown — Digital Solutions for Growing Businesses" },
       {
         property: "og:description",
         content:
@@ -85,16 +85,13 @@ function Index() {
           <div>
             <span className="load-in load-in-1 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
               <span aria-hidden="true" className="h-px w-8 bg-gold" />
-              Academic &amp; Technical Support, Direct
+              Digital Solutions Studio
             </span>
             <h1 className="load-in load-in-2 mt-6 text-4xl leading-[1.06] md:text-[3.4rem]">
-              CMU Africa-bound AI Engineer. Direct academic help. No middlemen.
+              Digital solutions built for the way you work.
             </h1>
             <p className="load-in load-in-3 mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              On most major platforms, your $100 order quietly passes through multiple hands before
-              reaching the writer, leaving just a fraction for the actual work. Edurown removes the
-              chain. You work one-on-one with a Carnegie Mellon-admitted engineer. Worldwide
-              service. Fair pricing.
+              From your first website to smarter workflows, Edurown helps businesses, educators, and growing teams turn ideas into useful digital experiences. We combine thoughtful design, practical technology, and direct collaboration to solve real problems.
             </p>
 
             <div className="load-in load-in-4 mt-8 flex flex-wrap gap-3">
@@ -171,7 +168,7 @@ function Index() {
                 />
                 <div className="pointer-events-none absolute inset-x-4 bottom-4 flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-ink-foreground/90">
                   <span className="pulse-dot h-2 w-2 shrink-0 rounded-full bg-emerald-400" />
-                  Working session, in progress
+                  Ideas into working solutions
                 </div>
               </div>
             </div>
@@ -216,8 +213,8 @@ function Index() {
         <div className="container-page">
           <SectionHead
             eyebrow="Services"
-            title="A wide range of academic and technical work"
-            lead="Every project is handled personally, matched to your exact brief, formatting, and deadline."
+            title="Digital solutions that move your work forward"
+            lead="From a polished online presence to connected workflows and education platforms, choose the support that fits your next step."
             center
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -257,7 +254,7 @@ function Index() {
       {/* Pillars */}
       <section className="mint-band border-y border-border py-16 md:py-20">
         <div className="container-page">
-          <SectionHead eyebrow="Why Edurown" title="Built around direct, personal attention" />
+          <SectionHead eyebrow="Why Edurown" title="Thoughtful technology. Clear communication. Useful outcomes." />
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {HOME_PILLARS.map((p, i) => {
               const Icon = PILLAR_ICONS[i % PILLAR_ICONS.length]!;
@@ -284,8 +281,8 @@ function Index() {
         <div className="container-page">
           <SectionHead
             eyebrow="How it works"
-            title="From first visit to finished work"
-            lead="Here's exactly what happens, start to finish, and back around for the next project."
+            title="A clear path from idea to launch"
+            lead="We keep the process straightforward: understand the problem, agree on the scope, build with purpose, and refine together."
             center
           />
           <div className="mt-12">
