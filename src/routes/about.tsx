@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Meet the people behind Edurown, direct, personal academic and technical writing support for clients abroad.",
+          "Meet the people behind Edurown, direct, personal digital solutions for clients abroad.",
       },
       { property: "og:title", content: "About Edurown — Direct Academic Support, No Middlemen" },
       {
@@ -48,7 +48,7 @@ const TEAM = [
     alt: "Stephen, founder and lead researcher at Edurown",
     role: "Founder",
     name: 'Stephen — "The Crown"',
-    bio: "A Kenya-based IT and AI consultant who founded Edurown to give students and professionals abroad direct access to careful, well-researched academic and technical work. He holds a First-Class Honours degree in Information Technology and has been admitted to Carnegie Mellon University Africa's Master's program in Engineering AI for Fall 2026. Since 2024 he's worked as a freelance IT and AI consultant, handling research, data analysis, and technical writing for clients internationally, bringing that same direct, hands-on approach to every Edurown project.",
+    bio: "A Kenya-based IT and AI consultant who founded Edurown to give students and professionals abroad direct access to careful, well-researched web, automation, education technology, and data projects. He holds a First-Class Honours degree in Information Technology and has been admitted to Carnegie Mellon University Africa's Master's program in Engineering AI for Fall 2026. Since 2024 he's worked as a freelance IT and AI consultant, handling research, data analysis, and technical writing for clients internationally, bringing that same direct, hands-on approach to every Edurown project.",
     cta: { label: "Connect with Stephen", href: CONTACT.whatsapp },
   },
 ];
