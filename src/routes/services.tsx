@@ -6,13 +6,13 @@ import { SERVICES_ALL } from "@/data/site";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Academic & Technical Work, Done Properly | Edurown" },
+      { title: "Solutions — Digital Services for Growing Teams | Edurown" },
       {
         name: "description",
         content:
-          "Essays, research papers, dissertations, data analysis, lab reports, editing, coursework, case studies, literature reviews and term papers.",
+          "Web design, AI automation, education technology, branding, data solutions, IT support, and ongoing website care.",
       },
-      { property: "og:title", content: "Services — Academic & Technical Work | Edurown" },
+      { property: "og:title", content: "Solutions — Digital Services | Edurown" },
       {
         property: "og:description",
         content:
@@ -28,8 +28,8 @@ function Services() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Academic and technical work, done properly."
-        lead="Every project below is handled personally, matched to your brief, formatting, and deadline."
+        title="Practical digital solutions, thoughtfully delivered."
+        lead="Choose a focused service or combine several into one project. We agree on the scope, timeline, and deliverables before work begins."
       />
 
       <section className="py-16 md:py-20">
