@@ -1,0 +1,41 @@
+name: Repair TanStack lockfile
+
+on:
+  push:
+    branches:
+      - redesign/digital-solutions-positioning
+    paths:
+      - ".github/workflows/repair-tanstack-lockfile.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: redesign/digital-solutions-positioning
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Regenerate lockfile from package.json
+        run: npm install --package-lock-only --ignore-scripts
+      - name: Validate clean install and production build
+        run: |
+          npm ci
+          npm run build
+      - name: Commit regenerated lockfile and remove temporary workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm .github/workflows/repair-tanstack-lockfile.yml
+          git add package-lock.json .github/workflows/repair-tanstack-lockfile.yml
+          if ! git diff --cached --quiet; then
+            git commit -m "Regenerate and validate patched TanStack lockfile"
+            git push origin HEAD:redesign/digital-solutions-positioning
+          fi
