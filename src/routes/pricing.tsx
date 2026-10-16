@@ -10,7 +10,7 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Starting rates for essays, research papers, dissertations, data analysis, web development and more. Exact price confirmed directly before work begins.",
+          "Indicative pricing for websites, automation, education technology, design, data, and technical support. Exact quotes depend on scope and deliverables.",
       },
       { property: "og:title", content: "Pricing — Straightforward Starting Rates | Edurown" },
       {
@@ -29,7 +29,7 @@ function Pricing() {
       <PageHero
         eyebrow="Pricing"
         title="Straightforward starting rates."
-        lead="These are starting points, not a checkout page. Every project is different. Message us your brief on WhatsApp or email and we'll confirm the exact price before anything begins. No calculators, no forms, no surprises."
+        lead="Every project is different. Share your goals, required features, timeline, and budget range. We'll suggest a practical scope and confirm the quote before work begins."
       />
 
       {PRICING_GROUPS.map((group, gi) => (
@@ -79,8 +79,8 @@ function Pricing() {
           <div>
             <SectionHead
               eyebrow="Before you commit"
-              title="We know you have options. Here's why we're different."
-              lead="Most platforms take your $100, keep $75, and hand the work to the lowest bidder. Edurown is built the other way around."
+              title="Clear scope. Direct collaboration. Practical delivery."
+              lead="We keep the process direct: agree on the outcome, scope, timeline, and deliverables before work begins."
             />
             <ul className="mt-7 space-y-3">
               {PRICING_DIFFERENCE.map((d) => (
@@ -97,7 +97,7 @@ function Pricing() {
                 href={CONTACT.whatsapp}
                 className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-bold text-ink-foreground shadow-cta"
               >
-                Ask for a Sample
+                Discuss Your Project
               </a>
               <Link
                 to="/about"
@@ -115,7 +115,7 @@ function Pricing() {
         <div className="container-page">
           <SectionHead
             eyebrow="How we protect you"
-            title="We're not a faceless platform, so we built safeguards:"
+            title="A clear process from day one"
             center
           />
           <ul className="mx-auto mt-10 grid max-w-4xl gap-3 sm:grid-cols-2">
@@ -135,13 +135,10 @@ function Pricing() {
             ))}
           </ul>
           <p className="mx-auto mt-10 max-w-3xl text-center text-base leading-relaxed text-muted-foreground">
-            If a big platform with buyer protection feels safer, we genuinely understand. But if
-            you're tired of inflated prices for work farmed out through layers of middlemen, you're
-            exactly where you need to be.
+            For larger projects, we can agree on milestones and review points so expectations stay clear on both sides.
           </p>
           <blockquote className="mx-auto mt-8 max-w-3xl rounded-3xl bg-ink p-7 text-center text-lg font-semibold leading-relaxed text-ink-foreground">
-            "Ever wonder why your $100 order gets fulfilled for just $7 on writer dashboards? That
-            gap is eaten by middlemen. Edurown cuts them out."
+            "Good digital work starts with a clear problem, a shared plan, and direct communication."
           </blockquote>
         </div>
       </section>
@@ -152,8 +149,7 @@ function Pricing() {
             Get an exact price for your project
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Send your topic, scope, and deadline. We'll confirm the price directly, no calculators
-            or account setup.
+            Share your project goals, key requirements, and preferred timeline. We'll discuss the scope and provide a clear quote.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a
