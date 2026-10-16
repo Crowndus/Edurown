@@ -54,7 +54,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Work one-on-one with a Carnegie Mellon-admitted engineer for essays, research papers, dissertations, data analysis, and technical projects. No middlemen.",
+          "Modern websites, practical AI automations, education technology, digital design, and data solutions for organisations worldwide.",
       },
     ],
   }),
@@ -64,15 +64,12 @@ export const Route = createFileRoute("/")({
 const PILLAR_ICONS = [UserCheck, Lock, Globe] as const;
 
 const MARQUEE_ICONS: Record<string, LucideIcon> = {
-  Essays: PenLine,
-  "Research Papers": FileText,
-  "Dissertations & Theses": GraduationCap,
-  "Data & Statistical Analysis": BarChart3,
-  "Web Development": Code2,
-  "Coding Projects": Terminal,
-  "Case Studies": Briefcase,
-  "Lab & Technical Reports": FlaskConical,
-  "Scholarship Support": Award,
+  "Web Design & Development": Code2,
+  "AI & Workflow Automation": Sparkles,
+  "Education Technology": GraduationCap,
+  "Branding & Digital Design": PenLine,
+  "Data & IT Solutions": BarChart3,
+  "Website Care & Support": ShieldCheck,
 };
 
 
