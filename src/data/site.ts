@@ -163,46 +163,14 @@ export const FAQS = [
 ];
 
 export const SERVICES_ALL = [
-  {
-    title: "Essay Writing",
-    body: "Well-structured, original essays across subjects, argued clearly and referenced correctly.",
-  },
-  {
-    title: "Research Papers",
-    body: "In-depth research grounded in credible sources, with a clear methodology and argument.",
-  },
-  {
-    title: "Dissertations & Thesis Assistance",
-    body: "Chapter-by-chapter support, from proposal and literature review through to final draft.",
-  },
-  {
-    title: "Data & Statistical Analysis",
-    body: "Statistical testing (t-tests, regressions, and more), data visualization, and clear write-ups of methods and results.",
-  },
-  {
-    title: "Lab & Technical Reports",
-    body: "Bioimage analysis, cybersecurity lab reports, and other technical write-ups grounded in real methodology.",
-  },
-  {
-    title: "Editing & Proofreading",
-    body: "Line-by-line review for clarity, grammar, structure, and citation accuracy.",
-  },
-  {
-    title: "Coursework Help",
-    body: "Applied coursework across subjects, including web design and technical assignments.",
-  },
-  {
-    title: "Case Studies",
-    body: "Structured case analysis for business, cybersecurity, and applied subjects.",
-  },
-  {
-    title: "Literature Reviews",
-    body: "Thorough, well-organized reviews that map the existing research on your topic.",
-  },
-  {
-    title: "Term Papers",
-    body: "Full-length term papers researched and written to your course's specific requirements.",
-  },
+  { title: "Web Design & Development", body: "Responsive business websites, landing pages, portfolio sites, and website redesigns built around your goals and audience." },
+  { title: "AI & Workflow Automation", body: "Practical AI-assisted workflows, task automation, and tool integrations that reduce repetitive manual work." },
+  { title: "Education Technology", body: "School websites, learning management systems, learner performance dashboards, and parent-facing portals." },
+  { title: "Branding & Digital Design", body: "Visual identity direction, brand assets, social media designs, and consistent digital presentation." },
+  { title: "Data & Reporting", body: "Data cleaning, analysis, reporting, and dashboards that make information easier to understand and use." },
+  { title: "IT Support & Technical Solutions", body: "Practical troubleshooting, technical setup, documentation, and support for everyday digital workflows." },
+  { title: "Website Care & Improvements", body: "Content updates, usability refinements, performance checks, and ongoing improvements after launch." },
+  { title: "Digital Strategy & Consultation", body: "A focused discussion to clarify the problem, prioritise next steps, and identify a realistic digital approach." },
 ];
 
 export const PRICING_GROUPS = [
