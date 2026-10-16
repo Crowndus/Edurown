@@ -133,9 +133,9 @@ export function FounderCard() {
         className="mx-auto aspect-square w-full max-w-[18rem] rounded-2xl object-cover"
       />
       <h3 className="mt-4 text-lg">Stephen — "The Crown"</h3>
-      <p className="text-sm text-muted-foreground">CMU Africa-bound AI Engineer</p>
+      <p className="text-sm text-muted-foreground">IT & AI Consultant</p>
       <div className="mt-4 flex flex-wrap justify-center gap-2">
-        {["First-Class Honours", "Carnegie Mellon", "1-on-1 Support"].map((b) => (
+        {["Information Technology", "AI & Automation", "Direct Collaboration"].map((b) => (
           <span
             key={b}
             className="rounded-full bg-gold-tint px-3 py-1 text-[0.68rem] font-semibold text-gold-deep"
@@ -151,7 +151,7 @@ export function FounderCard() {
   );
 }
 
-/* Circular process diagram — six nodes around a "CLIENTS RETURN" hub. */
+/* Circular process diagram — six nodes around a "PROJECTS GROW" hub. */
 const CYCLE_POINTS = [
   { x: 270, y: 105, lx: 270, ly: 62, anchor: "middle" as const },
   { x: 412.9, y: 187.5, lx: 448.9, ly: 192.5, anchor: "start" as const },
