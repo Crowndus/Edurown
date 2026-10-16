@@ -71,24 +71,12 @@ export const HOME_PILLARS = [
 ];
 
 export const HOME_STEPS = [
-  {
-    title: "Visit & Browse",
-    body: "You look through services, pricing, and background, no account required.",
-  },
-  { title: "Reach Out", body: "Message directly on WhatsApp or email with what you need." },
-  {
-    title: "Confirm Scope",
-    body: "Instructions, expectations, deadline, and price agreed before anything starts.",
-  },
-  { title: "Work Begins", body: "Handled personally, matched exactly to your brief." },
-  {
-    title: "Deliver & Revise",
-    body: "Finished work delivered on time, with revisions until it's right.",
-  },
-  {
-    title: "Payment",
-    body: "Settled once the work meets your brief, straightforward, on both sides.",
-  },
+  { title: "Discover", body: "Talk through the problem, goals, audience, and constraints." },
+  { title: "Define Scope", body: "Agree on features, deliverables, timeline, and budget." },
+  { title: "Plan", body: "Map the approach and priorities before building." },
+  { title: "Build", body: "Create the solution in clear, reviewable stages." },
+  { title: "Refine", body: "Review the work and make agreed improvements." },
+  { title: "Handover", body: "Share the finished work and practical guidance for using it." },
 ];
 
 export const CAUTION_POINTS = [
