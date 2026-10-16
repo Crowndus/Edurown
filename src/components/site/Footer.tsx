@@ -28,8 +28,7 @@ export function Footer() {
             </span>
           </span>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-foreground/70">
-            Direct academic and technical writing support for students and professionals worldwide,
-            handled personally, start to finish.
+            Digital solutions for growing businesses, educators, and teams — from web development and automation to education technology and data support.
           </p>
 
           <div className="mt-5 flex items-center gap-3">
