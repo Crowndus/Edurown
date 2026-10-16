@@ -175,120 +175,34 @@ export const SERVICES_ALL = [
 
 export const PRICING_GROUPS = [
   {
-    group: "Writing & Research",
+    group: "Websites & Online Presence",
     rows: [
-      {
-        title: "Essays",
-        body: "Priced by academic level - high school, undergraduate, or graduate.",
-        price: "$8 - $16",
-        unit: "per page",
-      },
-      {
-        title: "Research Papers",
-        body: "Includes source research, citations, and structured argument.",
-        price: "$12 - $20",
-        unit: "per page",
-      },
-      {
-        title: "Dissertations & Thesis Assistance",
-        body: "Chapter-by-chapter or full project, priced on scope and level.",
-        price: "from $400",
-        unit: "per project",
-      },
-      {
-        title: "Case Studies & Literature Reviews",
-        body: "Structured analysis grounded in real sources and methodology.",
-        price: "$12 - $18",
-        unit: "per page",
-      },
-      {
-        title: "Term Papers & Coursework Help",
-        body: "Full-length work matched to your course's specific requirements.",
-        price: "$10 - $16",
-        unit: "per page",
-      },
-      {
-        title: "Editing & Proofreading",
-        body: "Line-by-line review of an existing draft for grammar, clarity, and citations.",
-        price: "$4 - $7",
-        unit: "per page",
-      },
+      { title: "Landing Page", body: "A focused, responsive page for one offer, campaign, or service.", price: "$150–$350", unit: "per project" },
+      { title: "Business Website", body: "A polished multi-page website for a small business or professional service.", price: "$350–$800+", unit: "per project" },
+      { title: "Website Refresh", body: "Improve layout, messaging, mobile usability, and visual consistency on an existing site.", price: "$150–$400", unit: "per sprint" },
     ],
   },
   {
-    group: "Applications & Scholarships",
+    group: "Automation, Data & Design",
     rows: [
-      {
-        title: "Application Essay Coaching & Editing",
-        body: "Structural feedback, editing, and line-level polish on your own personal statement - you stay the author.",
-        price: "$35 - $75",
-        unit: "per essay",
-      },
-      {
-        title: "Scholarship Application Support",
-        body: "Coaching and editing on your scholarship essay and supporting materials.",
-        price: "$40 - $100",
-        unit: "per application",
-      },
+      { title: "Workflow Automation", body: "Automate a clearly defined repetitive task or connect a small set of tools.", price: "$100–$500+", unit: "per workflow" },
+      { title: "Dashboard & Data Reporting", body: "Clean, structure, and present a dataset or business report in a clear dashboard.", price: "$100–$400+", unit: "per project" },
+      { title: "Brand & Social Design Pack", body: "A scoped set of visual assets to establish a consistent digital presence.", price: "$80–$250", unit: "per pack" },
     ],
   },
   {
-    group: "Technical & Data",
+    group: "Education Technology & Ongoing Support",
     rows: [
-      {
-        title: "Data & Statistical Analysis",
-        body: "Statistical testing, data visualization, and clear write-ups of methods and results.",
-        price: "$25 - $45",
-        unit: "per hour",
-      },
-      {
-        title: "Lab & Technical Reports",
-        body: "Bioimage analysis, cybersecurity, and other technical write-ups.",
-        price: "$15 - $22",
-        unit: "per page",
-      },
-      {
-        title: "Web Development",
-        body: "From a single landing page to a small multi-page site, built and documented properly.",
-        price: "$150 - $800+",
-        unit: "per project",
-      },
-      {
-        title: "Coding & Technical Projects",
-        body: "Scripts, small applications, and technical coursework projects.",
-        price: "$15 - $35",
-        unit: "per hour",
-      },
-      {
-        title: "Design & Analysis Work",
-        body: "Visual design, layout, and applied analysis tasks outside standard writing.",
-        price: "$20 - $40",
-        unit: "per hour",
-      },
-      {
-        title: "Data Entry",
-        body: "Structured data entry and cleanup work, billed by time or by task.",
-        price: "$4 - $8",
-        unit: "per hour",
-      },
-    ],
-  },
-  {
-    group: "Ongoing Work",
-    rows: [
-      {
-        title: "Contract-Based & Retainer Work",
-        body: "Ongoing academic or technical support on a recurring basis - priced around your volume and schedule.",
-        price: "Custom Quote",
-        unit: "",
-      },
+      { title: "School Website or Learning Portal", body: "Education-focused websites, learner/parent portals, and LMS features are scoped to requirements.", price: "Custom Quote", unit: "by scope" },
+      { title: "Website Care Plan", body: "Agreed routine updates, checks, and small improvements for an existing site.", price: "$75–$200", unit: "per month" },
+      { title: "IT Support & Consultation", body: "Troubleshooting, technical guidance, or a focused discovery session.", price: "From $25", unit: "per hour" },
     ],
   },
 ];
 
 export const PRICING_DIFFERENCE = [
-  { label: "You get a free sample", body: "- 300 words, your topic, before you pay." },
-  { label: "Milestone payments", body: "- 50% now, 50% when you're happy." },
-  { label: "Your work stays private", body: "- never shared, never resold." },
-  { label: "Direct WhatsApp support", body: "- message Stephen anytime." },
+  { label: "Clear scope", body: "Deliverables and priorities are agreed before work starts." },
+  { label: "Milestone options", body: "Larger projects can be divided into reviewable stages." },
+  { label: "Direct communication", body: "Discuss the project with the person planning and delivering it." },
+  { label: "Practical handover", body: "Receive agreed files, access details, and basic usage guidance." },
 ];
