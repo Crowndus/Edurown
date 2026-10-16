@@ -10,17 +10,10 @@ import {
   Lock,
   ArrowRight,
   Check,
-  Quote,
-  Star,
   PenLine,
-  FileText,
   GraduationCap,
   BarChart3,
   Code2,
-  Terminal,
-  Briefcase,
-  FlaskConical,
-  Award,
   type LucideIcon,
 } from "lucide-react";
 
@@ -28,16 +21,13 @@ import { CycleDiagram, FounderCard, ICON_ACCENTS, QuoteCta, SectionHead } from "
 import heroWorkspace from "@/assets/hero-workspace.jpg";
 
 import {
-  CAUTION_POINTS,
   CONTACT,
   HOME_CHIPS,
   HOME_PILLARS,
   HOME_SERVICES,
-  HOME_STEPS,
   MARQUEE_ITEMS,
   PORTFOLIO,
   SAFEGUARDS,
-  TESTIMONIALS,
   TRUST_BADGES,
 } from "@/data/site";
 
