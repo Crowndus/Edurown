@@ -13,7 +13,7 @@ export const Route = createFileRoute("/about")({
         content:
           "Meet the people behind Edurown, direct, personal digital solutions for clients abroad.",
       },
-      { property: "og:title", content: "About Edurown — Direct Academic Support, No Middlemen" },
+      { property: "og:title", content: "About Edurown — A Digital Solutions Studio" },
       {
         property: "og:description",
         content:
@@ -48,7 +48,7 @@ const TEAM = [
     alt: "Stephen, founder and lead researcher at Edurown",
     role: "Founder",
     name: 'Stephen — "The Crown"',
-    bio: "A Kenya-based IT professional and digital builder who founded Edurown to help organisations turn ideas and operational challenges into useful digital solutions. He holds a First-Class Honours degree in Information Technology and has been admitted to Carnegie Mellon University Africa's Master's program in Engineering AI for Fall 2026. Since 2024 he's worked as a freelance IT and AI consultant, handling research, data analysis, and technical writing for clients internationally, bringing that same direct, hands-on approach to every Edurown project.",
+    bio: "A Kenya-based IT professional and digital builder who founded Edurown to help organisations turn ideas and operational challenges into useful digital solutions. He holds a First-Class Honours degree in Information Technology and has worked across freelance IT, web, data, and technical projects. He brings a direct, hands-on approach to understanding requirements and building practical solutions.",
     cta: { label: "Connect with Stephen", href: CONTACT.whatsapp },
   },
 ];
