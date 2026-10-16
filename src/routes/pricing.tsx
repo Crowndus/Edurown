@@ -146,7 +146,7 @@ function Pricing() {
       <section className="surface-band border-t border-border py-16 md:py-20">
         <div className="container-page text-center">
           <h2 className="mx-auto max-w-2xl text-3xl md:text-[2.4rem] md:leading-tight">
-            Get an exact price for your project
+            Get a clear quote for your project
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-muted-foreground">
             Share your project goals, key requirements, and preferred timeline. We'll discuss the scope and provide a clear quote.
