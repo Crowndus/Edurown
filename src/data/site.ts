@@ -6,8 +6,8 @@ export const CONTACT = {
 };
 
 export const NAV = [
-  { to: "/about", label: "Want to Know About Edurown?" },
-  { to: "/services", label: "Services we Offer" },
+  { to: "/about", label: "About" },
+  { to: "/services", label: "Solutions" },
   { to: "/pricing", label: "Pricing" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact Us" },
@@ -23,71 +23,50 @@ export const FOOTER_NAV = [
 ] as const;
 
 export const MARQUEE_ITEMS = [
-  "Essays",
-  "Research Papers",
-  "Dissertations & Theses",
-  "Data & Statistical Analysis",
-  "Web Development",
-  "Coding Projects",
-  "Case Studies",
-  "Lab & Technical Reports",
-  "Scholarship Support",
+  "Web Design & Development",
+  "AI & Workflow Automation",
+  "Education Technology",
+  "Branding & Digital Design",
+  "Data & IT Solutions",
+  "Website Care & Support",
 ];
 
 export const TRUST_BADGES = [
-  "100% Human-Written",
-  "AI-Detection Safe",
-  "Turnitin & Grammarly Verified",
+  "Built around your goals",
+  "Clear scope & communication",
+  "Remote-first collaboration",
 ];
 
 export const HOME_CHIPS = [
-  "Essays",
-  "Research Papers",
-  "Dissertations",
-  "Data Analysis",
-  "Lab Reports",
-  "Case Studies",
+  "Websites",
+  "AI Automation",
+  "EdTech",
+  "Brand Identity",
+  "Data Solutions",
+  "IT Support",
 ];
 
 export const HOME_SERVICES = [
-  {
-    title: "Essays & Research Papers",
-    body: "Original, well-researched writing tailored to your topic, referencing style, and academic level.",
-  },
-  {
-    title: "Data & Statistical Analysis",
-    body: "Statistical testing, data visualization, and lab or bioimage analysis, with clear write-ups of methods and results.",
-  },
-  {
-    title: "Dissertations & Theses",
-    body: "Structured, chapter-by-chapter support from proposal through final defense-ready draft.",
-  },
-  {
-    title: "Editing & Proofreading",
-    body: "Line-by-line review for clarity, grammar, structure, and citation accuracy.",
-  },
-  {
-    title: "Case Studies & Reports",
-    body: "Cybersecurity, business, and lab reports built around real methodology and clear findings.",
-  },
-  {
-    title: "Web & Coursework Projects",
-    body: "Applied coursework in web design, systems, and technical subjects, built and documented properly.",
-  },
+  { title: "Web Design & Development", body: "Modern, responsive websites and landing pages designed to build trust, explain your offer, and turn visits into enquiries." },
+  { title: "AI & Workflow Automation", body: "Practical automations that reduce repetitive work, connect everyday tools, and help teams work more efficiently." },
+  { title: "Education Technology", body: "Learning platforms, school websites, learner and parent portals, and digital tools built around real education needs." },
+  { title: "Branding & Digital Design", body: "Cohesive visual identities, social media assets, and digital experiences that make your business look consistent and credible." },
+  { title: "Data & IT Solutions", body: "Data cleaning, reporting, dashboards, troubleshooting, and technical support that turn problems into clear next steps." },
+  { title: "Website Care & Support", body: "Content updates, performance improvements, maintenance, and ongoing help as your business grows." },
 ];
 
 export const HOME_PILLARS = [
   {
-    title: "You Deal Directly With Us",
-    body: "No bidding pools or account managers, you talk directly with the person doing the work.",
+    title: "Direct Collaboration",
+    body: "Talk directly with the person planning and delivering your project, from discovery through handover.",
   },
   {
-    title: "Confidential, Always",
-    body: "Your details and your work stay private from the first message to final delivery.",
+    title: "Clear Scope & Delivery",
+    body: "Agree on goals, deliverables, timeline, and budget before work begins, with progress updates along the way.",
   },
   {
-    title: "Built for Clients Worldwide",
-    body: "Comfortable working across time zones, currencies, and formatting standards.",
+    title: "Built for Real-World Use",
+    body: "Responsive, practical solutions shaped around the people who will actually use them.",
   },
 ];
 
@@ -120,18 +99,18 @@ export const CAUTION_POINTS = [
 
 export const SAFEGUARDS = [
   {
-    label: "Free sample:",
-    body: "Send your topic, get 300 words written before you pay.",
+    label: "Discovery first:",
+    body: "Share your goals and constraints; we will help define a sensible scope before work begins.",
   },
   {
-    label: "Milestone payments:",
-    body: "50% upfront, 50% when you're happy with the draft.",
+    label: "Milestone delivery:",
+    body: "Larger projects can be split into agreed stages with clear deliverables.",
   },
   {
-    label: "Unlimited revisions:",
-    body: "We tweak until it matches your brief, no extra charges.",
+    label: "Defined revisions:",
+    body: "Revision rounds and acceptance criteria are agreed in the project scope.",
   },
-  { label: "Direct WhatsApp:", body: "Chat with Stephen directly. No tickets, no bots." },
+  { label: "Direct communication:", body: "Speak with Stephen directly and get clear updates without unnecessary layers." },
 ];
 
 export const TESTIMONIALS = [
