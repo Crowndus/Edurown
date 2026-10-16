@@ -6,8 +6,8 @@ export const CONTACT = {
 };
 
 export const NAV = [
-  { to: "/about", label: "Want to Know About Edurown?" },
-  { to: "/services", label: "Services we Offer" },
+  { to: "/about", label: "About" },
+  { to: "/services", label: "Solutions" },
   { to: "/pricing", label: "Pricing" },
   { to: "/blog", label: "Blog" },
   { to: "/contact", label: "Contact Us" },
@@ -23,93 +23,60 @@ export const FOOTER_NAV = [
 ] as const;
 
 export const MARQUEE_ITEMS = [
-  "Essays",
-  "Research Papers",
-  "Dissertations & Theses",
-  "Data & Statistical Analysis",
-  "Web Development",
-  "Coding Projects",
-  "Case Studies",
-  "Lab & Technical Reports",
-  "Scholarship Support",
+  "Web Design & Development",
+  "AI & Workflow Automation",
+  "Education Technology",
+  "Branding & Digital Design",
+  "Data & IT Solutions",
+  "Website Care & Support",
 ];
 
 export const TRUST_BADGES = [
-  "100% Human-Written",
-  "AI-Detection Safe",
-  "Turnitin & Grammarly Verified",
+  "Built around your goals",
+  "Clear scope & communication",
+  "Remote-first collaboration",
 ];
 
 export const HOME_CHIPS = [
-  "Essays",
-  "Research Papers",
-  "Dissertations",
-  "Data Analysis",
-  "Lab Reports",
-  "Case Studies",
+  "Websites",
+  "AI Automation",
+  "EdTech",
+  "Brand Identity",
+  "Data Solutions",
+  "IT Support",
 ];
 
 export const HOME_SERVICES = [
-  {
-    title: "Essays & Research Papers",
-    body: "Original, well-researched writing tailored to your topic, referencing style, and academic level.",
-  },
-  {
-    title: "Data & Statistical Analysis",
-    body: "Statistical testing, data visualization, and lab or bioimage analysis, with clear write-ups of methods and results.",
-  },
-  {
-    title: "Dissertations & Theses",
-    body: "Structured, chapter-by-chapter support from proposal through final defense-ready draft.",
-  },
-  {
-    title: "Editing & Proofreading",
-    body: "Line-by-line review for clarity, grammar, structure, and citation accuracy.",
-  },
-  {
-    title: "Case Studies & Reports",
-    body: "Cybersecurity, business, and lab reports built around real methodology and clear findings.",
-  },
-  {
-    title: "Web & Coursework Projects",
-    body: "Applied coursework in web design, systems, and technical subjects, built and documented properly.",
-  },
+  { title: "Web Design & Development", body: "Modern, responsive websites and landing pages designed to build trust, explain your offer, and turn visits into enquiries." },
+  { title: "AI & Workflow Automation", body: "Practical automations that reduce repetitive work, connect everyday tools, and help teams work more efficiently." },
+  { title: "Education Technology", body: "Learning platforms, school websites, learner and parent portals, and digital tools built around real education needs." },
+  { title: "Branding & Digital Design", body: "Cohesive visual identities, social media assets, and digital experiences that make your business look consistent and credible." },
+  { title: "Data & IT Solutions", body: "Data cleaning, reporting, dashboards, troubleshooting, and technical support that turn problems into clear next steps." },
+  { title: "Website Care & Support", body: "Content updates, performance improvements, maintenance, and ongoing help as your business grows." },
 ];
 
 export const HOME_PILLARS = [
   {
-    title: "You Deal Directly With Us",
-    body: "No bidding pools or account managers, you talk directly with the person doing the work.",
+    title: "Direct Collaboration",
+    body: "Talk directly with the person planning and delivering your project, from discovery through handover.",
   },
   {
-    title: "Confidential, Always",
-    body: "Your details and your work stay private from the first message to final delivery.",
+    title: "Clear Scope & Delivery",
+    body: "Agree on goals, deliverables, timeline, and budget before work begins, with progress updates along the way.",
   },
   {
-    title: "Built for Clients Worldwide",
-    body: "Comfortable working across time zones, currencies, and formatting standards.",
+    title: "Built for Real-World Use",
+    body: "Responsive, practical solutions shaped around the people who will actually use them.",
   },
 ];
 
 export const HOME_STEPS = [
-  {
-    title: "Visit & Browse",
-    body: "You look through services, pricing, and background, no account required.",
-  },
-  { title: "Reach Out", body: "Message directly on WhatsApp or email with what you need." },
-  {
-    title: "Confirm Scope",
-    body: "Instructions, expectations, deadline, and price agreed before anything starts.",
-  },
-  { title: "Work Begins", body: "Handled personally, matched exactly to your brief." },
-  {
-    title: "Deliver & Revise",
-    body: "Finished work delivered on time, with revisions until it's right.",
-  },
-  {
-    title: "Payment",
-    body: "Settled once the work meets your brief, straightforward, on both sides.",
-  },
+  { title: "Discover", body: "Talk through the problem, goals, audience, and constraints." },
+  { title: "Define Scope", body: "Agree on features, deliverables, timeline, and budget." },
+  { title: "Plan", body: "Map the approach and priorities before building." },
+  { title: "Build", body: "Create the solution in clear, reviewable stages." },
+  { title: "Refine", body: "Review the work and make agreed improvements." },
+  { title: "Handover", body: "Share the finished work and practical guidance for using it." },
 ];
 
 export const CAUTION_POINTS = [
@@ -120,18 +87,18 @@ export const CAUTION_POINTS = [
 
 export const SAFEGUARDS = [
   {
-    label: "Free sample:",
-    body: "Send your topic, get 300 words written before you pay.",
+    label: "Discovery first:",
+    body: "Share your goals and constraints; we will help define a sensible scope before work begins.",
   },
   {
-    label: "Milestone payments:",
-    body: "50% upfront, 50% when you're happy with the draft.",
+    label: "Milestone delivery:",
+    body: "Larger projects can be split into agreed stages with clear deliverables.",
   },
   {
-    label: "Unlimited revisions:",
-    body: "We tweak until it matches your brief, no extra charges.",
+    label: "Defined revisions:",
+    body: "Revision rounds and acceptance criteria are agreed in the project scope.",
   },
-  { label: "Direct WhatsApp:", body: "Chat with Stephen directly. No tickets, no bots." },
+  { label: "Direct communication:", body: "Speak with Stephen directly and get clear updates without unnecessary layers." },
 ];
 
 export const TESTIMONIALS = [
@@ -184,164 +151,46 @@ export const FAQS = [
 ];
 
 export const SERVICES_ALL = [
-  {
-    title: "Essay Writing",
-    body: "Well-structured, original essays across subjects, argued clearly and referenced correctly.",
-  },
-  {
-    title: "Research Papers",
-    body: "In-depth research grounded in credible sources, with a clear methodology and argument.",
-  },
-  {
-    title: "Dissertations & Thesis Assistance",
-    body: "Chapter-by-chapter support, from proposal and literature review through to final draft.",
-  },
-  {
-    title: "Data & Statistical Analysis",
-    body: "Statistical testing (t-tests, regressions, and more), data visualization, and clear write-ups of methods and results.",
-  },
-  {
-    title: "Lab & Technical Reports",
-    body: "Bioimage analysis, cybersecurity lab reports, and other technical write-ups grounded in real methodology.",
-  },
-  {
-    title: "Editing & Proofreading",
-    body: "Line-by-line review for clarity, grammar, structure, and citation accuracy.",
-  },
-  {
-    title: "Coursework Help",
-    body: "Applied coursework across subjects, including web design and technical assignments.",
-  },
-  {
-    title: "Case Studies",
-    body: "Structured case analysis for business, cybersecurity, and applied subjects.",
-  },
-  {
-    title: "Literature Reviews",
-    body: "Thorough, well-organized reviews that map the existing research on your topic.",
-  },
-  {
-    title: "Term Papers",
-    body: "Full-length term papers researched and written to your course's specific requirements.",
-  },
+  { title: "Web Design & Development", body: "Responsive business websites, landing pages, portfolio sites, and website redesigns built around your goals and audience." },
+  { title: "AI & Workflow Automation", body: "Practical AI-assisted workflows, task automation, and tool integrations that reduce repetitive manual work." },
+  { title: "Education Technology", body: "School websites, learning management systems, learner performance dashboards, and parent-facing portals." },
+  { title: "Branding & Digital Design", body: "Visual identity direction, brand assets, social media designs, and consistent digital presentation." },
+  { title: "Data & Reporting", body: "Data cleaning, analysis, reporting, and dashboards that make information easier to understand and use." },
+  { title: "IT Support & Technical Solutions", body: "Practical troubleshooting, technical setup, documentation, and support for everyday digital workflows." },
+  { title: "Website Care & Improvements", body: "Content updates, usability refinements, performance checks, and ongoing improvements after launch." },
+  { title: "Digital Strategy & Consultation", body: "A focused discussion to clarify the problem, prioritise next steps, and identify a realistic digital approach." },
 ];
 
 export const PRICING_GROUPS = [
   {
-    group: "Writing & Research",
+    group: "Websites & Online Presence",
     rows: [
-      {
-        title: "Essays",
-        body: "Priced by academic level - high school, undergraduate, or graduate.",
-        price: "$8 - $16",
-        unit: "per page",
-      },
-      {
-        title: "Research Papers",
-        body: "Includes source research, citations, and structured argument.",
-        price: "$12 - $20",
-        unit: "per page",
-      },
-      {
-        title: "Dissertations & Thesis Assistance",
-        body: "Chapter-by-chapter or full project, priced on scope and level.",
-        price: "from $400",
-        unit: "per project",
-      },
-      {
-        title: "Case Studies & Literature Reviews",
-        body: "Structured analysis grounded in real sources and methodology.",
-        price: "$12 - $18",
-        unit: "per page",
-      },
-      {
-        title: "Term Papers & Coursework Help",
-        body: "Full-length work matched to your course's specific requirements.",
-        price: "$10 - $16",
-        unit: "per page",
-      },
-      {
-        title: "Editing & Proofreading",
-        body: "Line-by-line review of an existing draft for grammar, clarity, and citations.",
-        price: "$4 - $7",
-        unit: "per page",
-      },
+      { title: "Landing Page", body: "A focused, responsive page for one offer, campaign, or service.", price: "$150–$350", unit: "per project" },
+      { title: "Business Website", body: "A polished multi-page website for a small business or professional service.", price: "$350–$800+", unit: "per project" },
+      { title: "Website Refresh", body: "Improve layout, messaging, mobile usability, and visual consistency on an existing site.", price: "$150–$400", unit: "per sprint" },
     ],
   },
   {
-    group: "Applications & Scholarships",
+    group: "Automation, Data & Design",
     rows: [
-      {
-        title: "Application Essay Coaching & Editing",
-        body: "Structural feedback, editing, and line-level polish on your own personal statement - you stay the author.",
-        price: "$35 - $75",
-        unit: "per essay",
-      },
-      {
-        title: "Scholarship Application Support",
-        body: "Coaching and editing on your scholarship essay and supporting materials.",
-        price: "$40 - $100",
-        unit: "per application",
-      },
+      { title: "Workflow Automation", body: "Automate a clearly defined repetitive task or connect a small set of tools.", price: "$100–$500+", unit: "per workflow" },
+      { title: "Dashboard & Data Reporting", body: "Clean, structure, and present a dataset or business report in a clear dashboard.", price: "$100–$400+", unit: "per project" },
+      { title: "Brand & Social Design Pack", body: "A scoped set of visual assets to establish a consistent digital presence.", price: "$80–$250", unit: "per pack" },
     ],
   },
   {
-    group: "Technical & Data",
+    group: "Education Technology & Ongoing Support",
     rows: [
-      {
-        title: "Data & Statistical Analysis",
-        body: "Statistical testing, data visualization, and clear write-ups of methods and results.",
-        price: "$25 - $45",
-        unit: "per hour",
-      },
-      {
-        title: "Lab & Technical Reports",
-        body: "Bioimage analysis, cybersecurity, and other technical write-ups.",
-        price: "$15 - $22",
-        unit: "per page",
-      },
-      {
-        title: "Web Development",
-        body: "From a single landing page to a small multi-page site, built and documented properly.",
-        price: "$150 - $800+",
-        unit: "per project",
-      },
-      {
-        title: "Coding & Technical Projects",
-        body: "Scripts, small applications, and technical coursework projects.",
-        price: "$15 - $35",
-        unit: "per hour",
-      },
-      {
-        title: "Design & Analysis Work",
-        body: "Visual design, layout, and applied analysis tasks outside standard writing.",
-        price: "$20 - $40",
-        unit: "per hour",
-      },
-      {
-        title: "Data Entry",
-        body: "Structured data entry and cleanup work, billed by time or by task.",
-        price: "$4 - $8",
-        unit: "per hour",
-      },
-    ],
-  },
-  {
-    group: "Ongoing Work",
-    rows: [
-      {
-        title: "Contract-Based & Retainer Work",
-        body: "Ongoing academic or technical support on a recurring basis - priced around your volume and schedule.",
-        price: "Custom Quote",
-        unit: "",
-      },
+      { title: "School Website or Learning Portal", body: "Education-focused websites, learner/parent portals, and LMS features are scoped to requirements.", price: "Custom Quote", unit: "by scope" },
+      { title: "Website Care Plan", body: "Agreed routine updates, checks, and small improvements for an existing site.", price: "$75–$200", unit: "per month" },
+      { title: "IT Support & Consultation", body: "Troubleshooting, technical guidance, or a focused discovery session.", price: "From $25", unit: "per hour" },
     ],
   },
 ];
 
 export const PRICING_DIFFERENCE = [
-  { label: "You get a free sample", body: "- 300 words, your topic, before you pay." },
-  { label: "Milestone payments", body: "- 50% now, 50% when you're happy." },
-  { label: "Your work stays private", body: "- never shared, never resold." },
-  { label: "Direct WhatsApp support", body: "- message Stephen anytime." },
+  { label: "Clear scope", body: "Deliverables and priorities are agreed before work starts." },
+  { label: "Milestone options", body: "Larger projects can be divided into reviewable stages." },
+  { label: "Direct communication", body: "Discuss the project with the person planning and delivering it." },
+  { label: "Practical handover", body: "Receive agreed files, access details, and basic usage guidance." },
 ];

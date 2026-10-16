@@ -79,11 +79,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Edurown — Direct Academic & Technical Writing Support" },
+      { title: "Edurown — Digital Solutions for Growing Businesses" },
       {
         name: "description",
         content:
-          "Work one-on-one with a Carnegie Mellon-admitted engineer for essays, research papers, dissertations, data analysis, and technical projects. No middlemen.",
+          "Modern websites, practical AI automations, education technology, digital design, and data solutions for organisations worldwide.",
       },
       { name: "author", content: "Edurown" },
       { property: "og:type", content: "website" },

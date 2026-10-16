@@ -6,16 +6,16 @@ import { CONTACT } from "@/data/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Edurown — Talk Directly to the Person Doing the Work" },
+      { title: "Contact Edurown — Start a Digital Project" },
       {
         name: "description",
         content:
-          "Message Edurown on WhatsApp or email with your topic, scope and deadline for a direct reply, usually the same day.",
+          "Contact Edurown about a website, automation, education technology, design, data, or IT project.",
       },
-      { property: "og:title", content: "Contact Edurown — Talk Directly to Us" },
+      { property: "og:title", content: "Contact Edurown — Start a Project" },
       {
         property: "og:description",
-        content: "WhatsApp or email your brief and get a direct reply, no forms or account setup.",
+        content: "Share your goals and project details by WhatsApp or email.",
       },
     ],
   }),
@@ -27,8 +27,8 @@ function Contact() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Talk directly to the person doing the work."
-        lead="No contact forms, no ticket queues. Send your topic, scope, and deadline and you'll get a direct reply, usually the same day."
+        title="Let's talk about what you want to build."
+        lead="Tell us what you're trying to improve, what you need built, and any timing or budget considerations. We'll reply directly to discuss the next step."
       />
 
       <section className="py-16 md:py-20">
@@ -42,7 +42,7 @@ function Contact() {
             </span>
             <h2 className="mt-6 text-2xl">WhatsApp</h2>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              Fastest way to reach us. Send your brief and get a direct reply.
+              Best for a quick introduction, project questions, and a first discussion.
             </p>
             <span className="mt-5 inline-flex text-base font-bold text-primary group-hover:underline">
               {CONTACT.phone}
@@ -58,7 +58,7 @@ function Contact() {
             </span>
             <h2 className="mt-6 text-2xl">Email</h2>
             <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-              Best for detailed briefs, attachments, and formatting guides.
+              Best for a detailed project brief, reference links, and attachments.
             </p>
             <span className="mt-5 inline-flex break-all text-base font-bold text-accent group-hover:underline">
               {CONTACT.email}
