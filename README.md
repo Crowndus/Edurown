@@ -1,8 +1,8 @@
 <div align="center">
-  <h1>Edurown — Technical Consulting & Software Development</h1>
+  <h1>Edurown — Direct Technical Consulting & Software Development</h1>
   
-  <p><b>Direct technical consulting, custom software, and data-driven solutions for clients worldwide.</b></p>
-  <p><i>No middlemen. No bidding pools. Just clear communication and high-quality engineering from start to finish.</i></p>
+  <p><b>Direct, personal technical consulting and software development for clients worldwide.</b></p>
+  <p><i>No middlemen, no bidding pools — just clear communication, custom-built software, and data-driven solutions from start to finish.</i></p>
 
   <p>
     <a href="https://edurown.vercel.app/">
@@ -21,21 +21,29 @@
 
 ### 📌 Overview
 
-Edurown was built to cut through the opaque middleman chain that exists on traditional freelance platforms. When clients pay a premium on large platforms, the developers and engineers often receive a fraction of the cost. 
+Edurown was built to cut through the opaque middleman chain that exists on traditional freelance platforms. When clients pay a premium on platforms like Upwork or Fiverr, the developers and engineers often receive a fraction of the cost. 
 
-Edurown removes the layers — clients pay fair rates, engineers get paid properly, and high-quality technical execution is guaranteed.
+Edurown removes the layers — clients pay fair rates, engineers get paid properly, and **high-quality technical execution** is guaranteed.
+
+---
+
+### 🖼️ Preview
+
+<div align="center">
+  <img src="screenshots/preview-banner.jpg" alt="Edurown workspace preview" width="100%" />
+</div>
 
 ---
 
 ### 🚀 Platform Features
 
-- **💻 Full-Stack Web Development:** Custom web applications built with React, Next.js, and modern backend APIs.
-- **📊 Data Analysis & Machine Learning:** Data pipelines, predictive modeling (Python/Pandas), and interactive dashboards.
-- **📈 Algorithmic Trading & FinTech:** Development of real-time trading bots, WebSocket integrations, and risk-management algorithms.
-- **🔬 Technical Documentation:** System architecture design, API documentation, and technical writing for engineering projects.
-- **✏️ Code Review & Optimization:** Line-by-line review for performance, security, and best practices.
-- **🌍 Worldwide Service:** Comfortable working across time zones and modern development standards.
-- **✨ Premium Motion:** Sitewide scroll-reveal and page-load transitions, with a `prefers-reduced-motion` fallback.
+*   **💻 Full-Stack Web Development:** Custom web applications built with React, Next.js, and modern backend APIs.
+*   **📊 Data Analysis & Machine Learning:** Data pipelines, predictive modeling (Python/Pandas), and interactive dashboards.
+*   **📈 Algorithmic Trading & FinTech:** Development of real-time trading bots, WebSocket integrations, and risk-management algorithms.
+*   **🔬 Technical Documentation:** System architecture design, API documentation, and technical writing for engineering projects.
+*   **✏️ Code Review & Optimization:** Line-by-line review for performance, security, and best practices.
+*   **🌍 Worldwide Service:** Comfortable working across time zones and modern development standards.
+*   **✨ Premium Motion:** Sitewide scroll-reveal and page-load transitions, with a `prefers-reduced-motion` fallback.
 
 ---
 
@@ -52,7 +60,16 @@ Edurown removes the layers — clients pay fair rates, engineers get paid proper
 
 <br/>
 
-*This is a rebuild of the original static site on a proper component-based, server-rendered stack (TanStack Start / Nitro) — same brand, entirely new technical foundation.*
+| **Category** | **Technologies** |
+| :--- | :--- |
+| **Framework** | React 19, TanStack Start (SSR), TanStack Router, TanStack Query |
+| **Styling** | Tailwind CSS v4, shadcn/ui (Radix primitives) |
+| **Build** | Vite, Nitro |
+| **Icons** | lucide-react |
+| **Hosting** | Vercel |
+| **Version Control** | Git & GitHub |
+
+*This is a rebuild of the original static HTML/CSS/JS site on a proper component-based, server-rendered stack — same brand, new foundation.*
 
 ---
 
@@ -70,17 +87,36 @@ edurown/
 │   ├── hooks/ / lib/      # Shared hooks and utilities
 │   └── styles.css         # Design tokens + Tailwind theme
 ├── public/                # Favicon, robots.txt
-├── screenshots/           # README preview images
+├── screenshots/           # README preview images (Home, About, Services, Pricing, Contact)
 ├── vite.config.ts
 └── package.json
 ```
 
+---
+
+### 📸 Interface Previews
+
+<table>
+  <tr>
+    <td align="center"><b>Homepage</b><br/><img src="screenshots/homepage.jpg" width="380" alt="Homepage" /></td>
+    <td align="center"><b>About</b><br/><img src="screenshots/about.jpg" width="380" alt="About page" /></td>
+  </tr>
+  <tr>
+    <td align="center"><b>Services</b><br/><img src="screenshots/services.jpg" width="380" alt="Services page" /></td>
+    <td align="center"><b>Pricing</b><br/><img src="screenshots/pricing.jpg" width="380" alt="Pricing page" /></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2"><b>Contact</b><br/><img src="screenshots/contact.jpg" width="380" alt="Contact page" /></td>
+  </tr>
+</table>
+
+*(Reshoot and replace these anytime the design changes so they don't go stale.)*
+
+---
+
 ### 🚀 Getting Started
 
-**Prerequisites:**
-
-- Node.js 20+
-- npm (or bun)
+**Prerequisites:** Node.js 20+ and npm (or bun)
 
 **Local Development:**
 
@@ -106,6 +142,8 @@ Vercel is connected to this GitHub repo, so pushing to the deployed branch redep
 2. Go to vercel.com → Add New Project → import this repository
 3. Framework Preset: leave on auto-detect (or "Other") — Build Command `npm run build`, Install Command `npm install`
 4. Click Deploy
+
+---
 
 ### 📫 Contact
 
