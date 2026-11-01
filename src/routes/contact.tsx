@@ -10,7 +10,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Message Edurown on WhatsApp or email with your topic, scope and deadline for a direct reply, usually the same day.",
+          "Message Edurown on WhatsApp or email with your project, scope and timeline for a direct reply, usually the same day.",
       },
       { property: "og:title", content: "Contact Edurown — Talk Directly to Us" },
       {
@@ -28,7 +28,7 @@ function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Talk directly to the person doing the work."
-        lead="No contact forms, no ticket queues. Send your topic, scope, and deadline and you'll get a direct reply, usually the same day."
+        lead="No contact forms, no ticket queues. Send your project details, scope, and timeline and you'll get a direct reply, usually the same day."
       />
 
       <section className="py-16 md:py-20">

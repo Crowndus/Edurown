@@ -51,28 +51,28 @@ export const HOME_CHIPS = [
 
 export const HOME_SERVICES = [
   {
-    title: "Essays & Research Papers",
-    body: "Original, well-researched writing tailored to your topic, referencing style, and academic level.",
+    title: "Custom Web Applications",
+    body: "Fast, responsive, scalable web apps built with React, Next.js, and modern backend APIs.",
   },
   {
-    title: "Data & Statistical Analysis",
-    body: "Statistical testing, data visualization, and lab or bioimage analysis, with clear write-ups of methods and results.",
+    title: "Data Analysis & Predictive Modeling",
+    body: "Python, Pandas, and Scikit-learn pipelines, models, and dashboards that turn raw data into decisions.",
   },
   {
-    title: "Dissertations & Theses",
-    body: "Structured, chapter-by-chapter support from proposal through final defense-ready draft.",
+    title: "System Architecture & Documentation",
+    body: "Robust architectures and clear, professional technical documentation for your engineering projects.",
   },
   {
-    title: "Editing & Proofreading",
-    body: "Line-by-line review for clarity, grammar, structure, and citation accuracy.",
+    title: "Workflow Automation & Scripting",
+    body: "Automate manual processes, web scraping, and data entry to save hundreds of hours.",
   },
   {
-    title: "Case Studies & Reports",
-    body: "Cybersecurity, business, and lab reports built around real methodology and clear findings.",
+    title: "Algorithmic Trading & FinTech",
+    body: "Real-time trading bots, market data pipelines, and risk-management algorithms.",
   },
   {
-    title: "Web & Coursework Projects",
-    body: "Applied coursework in web design, systems, and technical subjects, built and documented properly.",
+    title: "Security Reviews & Code Audits",
+    body: "Security assessments and line-by-line code review with clear, actionable findings.",
   },
 ];
 
@@ -87,7 +87,7 @@ export const HOME_PILLARS = [
   },
   {
     title: "Built for Clients Worldwide",
-    body: "Comfortable working across time zones, currencies, and formatting standards.",
+    body: "Comfortable working across time zones, currencies, and modern development standards.",
   },
 ];
 
@@ -96,7 +96,7 @@ export const HOME_STEPS = [
     title: "Visit & Browse",
     body: "You look through services, pricing, and background, no account required.",
   },
-  { title: "Reach Out", body: "Message directly on WhatsApp or email with what you need." },
+  { title: "Reach Out", body: "Book a free scoping call, or message directly on WhatsApp or email." },
   {
     title: "Confirm Scope",
     body: "Instructions, expectations, deadline, and price agreed before anything starts.",
@@ -125,7 +125,7 @@ export const SAFEGUARDS = [
   },
   {
     label: "Milestone payments:",
-    body: "50% upfront, 50% when you're happy with the draft.",
+    body: "50% upfront, 50% when you're happy with the build.",
   },
   {
     label: "Unlimited revisions:",
@@ -137,15 +137,15 @@ export const SAFEGUARDS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "\"Stephen handled my entire Cyber Security course, research, lab reports, and the final paper. The work was thorough, well-referenced, and he explained complex concepts clearly when I had questions. I ended the semester with straight A's. He's the real deal.\"",
+      "\"Stephen conducted a comprehensive security review for our internal systems. The documentation was thorough, and he clearly explained complex vulnerabilities to our team. He\u2019s the real deal.\"",
     name: "Roseline",
-    role: "Cybersecurity Student, USA",
+    role: "Operations Director, USA",
   },
   {
     quote:
-      '"I was completely stuck on my Logistic Regression assignment, the data just wasn\'t making sense. Stephen not only ran the analysis perfectly but walked me through the results step-by-step. Clean code, clear write-up, and I actually understood the hyperparameters this time. Highly recommend."',
+      "\"We were completely stuck trying to build a predictive model for our sales data. Stephen not only built the data pipeline perfectly but walked us through the architecture step-by-step. Clean code, clear documentation, and we actually understood the model this time. Highly recommend.\"",
     name: "Brandon",
-    role: "Data Science, Los Angeles",
+    role: "Data Manager, Los Angeles",
   },
 ];
 
@@ -166,20 +166,20 @@ export const PORTFOLIO = [
 
 export const FAQS = [
   {
-    q: "Is this a legitimate service?",
-    a: "Yes, you're dealing directly with real, named people. See the About page for background, and feel free to ask for a sample before committing to anything.",
+    q: "Do you help with academic essays or assignments?",
+    a: "No. Edurown is a technical consulting agency. We do not provide academic ghostwriting or homework help. We build software, analyze data, and provide technical documentation for businesses, startups, and professionals.",
   },
   {
-    q: "How does payment work?",
-    a: "Price is agreed directly with you before work starts. Larger projects can be split into milestones.",
+    q: "What services do you specialize in?",
+    a: "We focus on full-stack web development (React, Next.js), data analysis and predictive modeling (Python, Pandas), algorithmic trading bots, and system architecture documentation.",
   },
   {
-    q: "How fast is turnaround?",
-    a: "Depends on scope and deadline, send your brief and you'll get a realistic timeline before agreeing to anything.",
+    q: "How do we get started on a project?",
+    a: "We begin with a free 30-minute technical scoping call to understand your requirements, after which we provide a clear timeline, architecture plan, and fixed price.",
   },
   {
-    q: "What if the work isn't right?",
-    a: "Revisions are part of the process until the work matches your brief.",
+    q: "How are pricing and timelines determined?",
+    a: "Pricing is based on the technical complexity and scope of the project, not by the word count or page length. We provide fixed-price quotes so you know exactly what you are paying before we write a single line of code.",
   },
 ];
 
@@ -201,24 +201,24 @@ export const SERVICES_ALL = [
     body: "Statistical testing (t-tests, regressions, and more), data visualization, and clear write-ups of methods and results.",
   },
   {
-    title: "Lab & Technical Reports",
-    body: "Bioimage analysis, cybersecurity lab reports, and other technical write-ups grounded in real methodology.",
+    title: "Security Reviews & Technical Reports",
+    body: "Security assessments of your systems, with clear documentation of vulnerabilities and how to fix them.",
   },
   {
-    title: "Editing & Proofreading",
-    body: "Line-by-line review for clarity, grammar, structure, and citation accuracy.",
+    title: "Code Review & Optimization",
+    body: "Line-by-line review for performance, security, and best practices, with clear, prioritized feedback.",
   },
   {
     title: "Workflow Automation & Scripting",
     body: "Save hundreds of hours by automating your manual business processes, web scraping, and data entry workflows.",
   },
   {
-    title: "Case Studies",
-    body: "Structured case analysis for business, cybersecurity, and applied subjects.",
+    title: "Technical Interview Prep",
+    body: "Mock interviews and structured feedback to help engineers prepare for technical interviews with confidence.",
   },
   {
-    title: "Literature Reviews",
-    body: "Thorough, well-organized reviews that map the existing research on your topic.",
+    title: "Applied AI & Intelligent Systems",
+    body: "Practical machine learning and automation systems built around your business data and goals.",
   },
   {
     title: "Algorithmic Trading & FinTech Solutions",
@@ -228,100 +228,70 @@ export const SERVICES_ALL = [
 
 export const PRICING_GROUPS = [
   {
-    group: "Writing & Research",
+    group: "Software & Engineering",
     rows: [
-      {
-        title: "Data Analysis & Scripting",
-        body: "Data cleaning, analysis scripts, and clear reports on your findings.",
-        price: "$8 - $16",
-        unit: "per page",
-      },
       {
         title: "Web App Development (MVP)",
-        body: "A working first version of your product, built with React, Next.js, and a modern backend.",
-        price: "$12 - $20",
-        unit: "per page",
-      },
-      {
-        title: "Full-Stack Software Engineering",
-        body: "End-to-end builds from architecture to deployment, priced on scope.",
-        price: "from $400",
-        unit: "per project",
-      },
-      {
-        title: "Case Studies & Literature Reviews",
-        body: "Structured analysis grounded in real sources and methodology.",
-        price: "$12 - $18",
-        unit: "per page",
-      },
-      {
-        title: "Algorithmic Trading Bots",
-        body: "Real-time trading bots, market data pipelines, and risk management matched to your strategy.",
-        price: "$10 - $16",
-        unit: "per page",
-      },
-      {
-        title: "Editing & Proofreading",
-        body: "Line-by-line review of an existing draft for grammar, clarity, and citations.",
-        price: "$4 - $7",
-        unit: "per page",
-      },
-    ],
-  },
-  {
-    group: "Applications & Scholarships",
-    rows: [
-      {
-        title: "Technical Interview Prep & Code Review",
-        body: "Mock interviews, feedback, and line-level code review to sharpen your engineering skills.",
-        price: "$35 - $75",
-        unit: "per essay",
-      },
-      {
-        title: "Scholarship Application Support",
-        body: "Coaching and editing on your scholarship essay and supporting materials.",
-        price: "$40 - $100",
-        unit: "per application",
-      },
-    ],
-  },
-  {
-    group: "Technical & Data",
-    rows: [
-      {
-        title: "Data & Statistical Analysis",
-        body: "Statistical testing, data visualization, and clear write-ups of methods and results.",
-        price: "$25 - $45",
-        unit: "per hour",
-      },
-      {
-        title: "Lab & Technical Reports",
-        body: "Bioimage analysis, cybersecurity, and other technical write-ups.",
-        price: "$15 - $22",
-        unit: "per page",
-      },
-      {
-        title: "Web Development",
-        body: "From a single landing page to a small multi-page site, built and documented properly.",
+        body: "From a single landing page to a working first version of your product, built with React, Next.js, and a modern backend.",
         price: "$150 - $800+",
         unit: "per project",
       },
       {
+        title: "Full-Stack Software Engineering",
+        body: "End-to-end builds from architecture to deployment, scoped and fixed-priced after a free scoping call.",
+        price: "Custom Quote",
+        unit: "",
+      },
+      {
+        title: "Algorithmic Trading Bots",
+        body: "Real-time trading bots, market data pipelines, and risk management matched to your strategy.",
+        price: "Custom Quote",
+        unit: "",
+      },
+      {
         title: "Coding & Technical Projects",
-        body: "Scripts, small applications, and technical coursework projects.",
+        body: "Scripts, small applications, and focused engineering tasks.",
         price: "$15 - $35",
         unit: "per hour",
       },
+    ],
+  },
+  {
+    group: "Data & Automation",
+    rows: [
       {
-        title: "Design & Analysis Work",
-        body: "Visual design, layout, and applied analysis tasks outside standard writing.",
-        price: "$20 - $40",
+        title: "Data Analysis & Scripting",
+        body: "Data cleaning, statistical testing, visualization, and analysis scripts with clear reports on your findings.",
+        price: "$25 - $45",
         unit: "per hour",
       },
       {
-        title: "Data Entry",
-        body: "Structured data entry and cleanup work, billed by time or by task.",
+        title: "Workflow Automation & Data Entry",
+        body: "Structured data entry, cleanup, and automation of repetitive processes, billed by time or by task.",
         price: "$4 - $8",
+        unit: "per hour",
+      },
+    ],
+  },
+  {
+    group: "Consulting & Documentation",
+    rows: [
+      {
+        title: "System Architecture & Technical Documentation",
+        body: "Architecture design, API documentation, and security reports grounded in real methodology.",
+        price: "Custom Quote",
+        unit: "",
+      },
+      {
+        title: "Technical Interview Prep & Code Review",
+        body: "Mock interviews, feedback, and line-level code review to sharpen your engineering skills.",
+        price: "$35 - $75",
+        unit: "per session",
+      },
+      {
+        title: "Design & Analysis Work",
+        body: "Visual design, layout, and applied analysis tasks to support your product.",
+        price: "$20 - $40",
         unit: "per hour",
       },
     ],
@@ -331,7 +301,7 @@ export const PRICING_GROUPS = [
     rows: [
       {
         title: "Contract-Based & Retainer Work",
-        body: "Ongoing academic or technical support on a recurring basis - priced around your volume and schedule.",
+        body: "Ongoing technical support on a recurring basis, priced around your volume and schedule.",
         price: "Custom Quote",
         unit: "",
       },
@@ -344,4 +314,18 @@ export const PRICING_DIFFERENCE = [
   { label: "Milestone payments", body: "- 50% now, 50% when you're happy." },
   { label: "Your work stays private", body: "- never shared, never resold." },
   { label: "Direct WhatsApp support", body: "- message Stephen anytime." },
+];
+
+export const TECH_STACK = [
+  "React 19",
+  "Next.js",
+  "TypeScript",
+  "TanStack",
+  "Tailwind CSS",
+  "Node.js",
+  "Python",
+  "Pandas",
+  "Scikit-learn",
+  "WebSockets",
+  "Vercel",
 ];

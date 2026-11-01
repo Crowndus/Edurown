@@ -184,11 +184,11 @@ export const POSTS: Post[] = [
 ];
 
 export const COMING_SOON_POST = {
-  category: "Data Science",
+  category: "Algorithmic Trading",
   date: "Coming Soon",
-  title: "How Expert Data Analysis Helped a Client Win a Research Grant",
+  title: "Designing Risk Controls for Automated Trading Systems",
   excerpt:
-    "The story of how expert data analysis turned a struggling project into a funded research initiative.",
+    "A practical look at position sizing, stop rules, and kill switches for trading bots.",
   note: "Coming soon...",
 };
 

@@ -10,7 +10,7 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Starting rates for essays, research papers, dissertations, data analysis, web development and more. Exact price confirmed directly before work begins.",
+          "Starting rates for web development, data analysis, algorithmic trading bots and more. Exact price confirmed directly before work begins.",
       },
       { property: "og:title", content: "Pricing — Straightforward Starting Rates | Edurown" },
       {

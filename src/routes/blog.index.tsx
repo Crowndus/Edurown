@@ -23,7 +23,7 @@ export const Route = createFileRoute("/blog/")({
       {
         property: "og:description",
         content:
-          "Straight talk on academic writing, data analysis, research, and technical projects.",
+          "Straight talk on data analysis, web development, and algorithmic trading.",
       },
     ],
   }),

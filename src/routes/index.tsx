@@ -33,6 +33,7 @@ import {
   MARQUEE_ITEMS,
   PORTFOLIO,
   SAFEGUARDS,
+  TECH_STACK,
   TESTIMONIALS,
   TRUST_BADGES,
 } from "@/data/site";
@@ -212,8 +213,8 @@ function Index() {
         <div className="container-page">
           <SectionHead
             eyebrow="Services"
-            title="A wide range of academic and technical work"
-            lead="Every project is handled personally, matched to your exact brief, formatting, and deadline."
+            title="Engineering, data, and automation, built to last"
+            lead="Every project is handled personally and matched to your exact requirements and timeline."
             center
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -247,6 +248,31 @@ function Index() {
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* Tech stack */}
+      <section className="border-b border-border py-12 md:py-14">
+        <div className="container-page text-center">
+          <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+            <span aria-hidden="true" className="h-px w-8 bg-gold" />
+            Built with modern tools
+            <span aria-hidden="true" className="h-px w-8 bg-gold" />
+          </span>
+          <ul className="mx-auto mt-6 flex max-w-3xl flex-wrap justify-center gap-2.5">
+            {TECH_STACK.map((t, i) => (
+              <li
+                key={t}
+                className={`rounded-full border px-4 py-2 text-sm font-semibold transition-colors hover:border-gold hover:text-gold-deep ${
+                  i % 2 === 1
+                    ? "border-gold/40 bg-gold-tint text-gold-deep"
+                    : "border-ink/15 bg-card text-ink"
+                }`}
+              >
+                {t}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -332,7 +358,7 @@ function Index() {
         <div className="container-page">
           <SectionHead
             eyebrow="Testimonials"
-            title="Real results from real students"
+            title="Real results from real clients"
             lead="Direct feedback from clients who worked with Stephen personally."
             center
           />
@@ -349,9 +375,17 @@ function Index() {
                 </div>
                 <Quote className="mt-5 h-6 w-6 text-primary/50" />
                 <blockquote className="mt-3 text-base leading-relaxed">{t.quote}</blockquote>
-                <figcaption className="mt-6 border-t border-border pt-4">
-                  <strong className="block text-sm font-bold">{t.name}</strong>
-                  <span className="text-sm text-muted-foreground">{t.role}</span>
+                <figcaption className="mt-6 flex items-center gap-3 border-t border-border pt-4">
+                  <span
+                    aria-hidden="true"
+                    className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-gold/50 bg-gold-tint font-display text-base font-bold text-gold-deep"
+                  >
+                    {t.name.charAt(0)}
+                  </span>
+                  <span>
+                    <strong className="block text-sm font-bold">{t.name}</strong>
+                    <span className="text-sm text-muted-foreground">{t.role}</span>
+                  </span>
                 </figcaption>
               </figure>
             ))}
@@ -365,7 +399,7 @@ function Index() {
           <SectionHead
             eyebrow="Selected work"
             title="Work that speaks for itself"
-            lead="A glimpse into the kind of technical and academic work Stephen handles."
+            lead="A glimpse into the kind of technical work Stephen handles."
             center
           />
           <div className="mt-12 grid gap-5 md:grid-cols-2">

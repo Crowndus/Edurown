@@ -6,17 +6,17 @@ import { SERVICES_ALL } from "@/data/site";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Academic & Technical Work, Done Properly | Edurown" },
+      { title: "Services | Technical Consulting & Software Development | Edurown" },
       {
         name: "description",
         content:
-          "Essays, research papers, dissertations, data analysis, lab reports, editing, coursework, case studies, literature reviews and term papers.",
+          "Custom web development, data analysis and predictive modeling, algorithmic trading, workflow automation, and system architecture.",
       },
-      { property: "og:title", content: "Services — Academic & Technical Work | Edurown" },
+      { property: "og:title", content: "Services | Technical Consulting | Edurown" },
       {
         property: "og:description",
         content:
-          "Every project handled personally, matched to your brief, formatting, and deadline.",
+          "Every project handled personally and matched to your requirements and timeline.",
       },
     ],
   }),
@@ -28,8 +28,8 @@ function Services() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Academic and technical work, done properly."
-        lead="Every project below is handled personally, matched to your brief, formatting, and deadline."
+        title="Engineering and data work, done properly."
+        lead="Every project below is handled personally and matched to your requirements and timeline."
       />
 
       <section className="py-16 md:py-20">
@@ -54,7 +54,7 @@ function Services() {
 
       <QuoteCta
         title="Not sure which service you need?"
-        lead="Send us your brief directly and we'll tell you exactly what it'll take."
+        lead="Send us your project details directly and we'll tell you exactly what it'll take."
         primaryLabel="WhatsApp"
         secondaryLabel="Email Us Directly"
       />

@@ -7,17 +7,17 @@ import { CONTACT } from "@/data/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Edurown — Direct Academic Support, No Middlemen" },
+      { title: "About Edurown | Direct Technical Consulting, No Middlemen" },
       {
         name: "description",
         content:
-          "Meet the people behind Edurown, direct, personal academic and technical writing support for clients abroad.",
+          "Meet the people behind Edurown, direct, personal technical consulting and software development for clients worldwide.",
       },
-      { property: "og:title", content: "About Edurown — Direct Academic Support, No Middlemen" },
+      { property: "og:title", content: "About Edurown | Direct Technical Consulting, No Middlemen" },
       {
         property: "og:description",
         content:
-          "Meet the people behind Edurown, direct, personal academic and technical writing support for clients abroad.",
+          "Meet the people behind Edurown, direct, personal technical consulting and software development for clients worldwide.",
       },
     ],
   }),
@@ -37,18 +37,18 @@ const VALUES = [
   },
   {
     icon: FileCheck,
-    title: "Original, Careful Work",
-    body: "Every piece is researched and written from scratch, matched to your exact brief.",
+    title: "Engineered Properly",
+    body: "Every solution is designed and built from scratch, matched to your exact requirements.",
   },
 ];
 
 const TEAM = [
   {
     photo: founderPhoto,
-    alt: "Stephen, founder and lead researcher at Edurown",
+    alt: "Stephen, founder and lead software engineer at Edurown",
     role: "Founder",
     name: 'Stephen — "The Crown"',
-    bio: "A Kenya-based IT and AI consultant who founded Edurown to give students and professionals abroad direct access to careful, well-researched academic and technical work. He holds a First-Class Honours degree in Information Technology and is currently applying for the Master's in Engineering AI (MSEAI) at Carnegie Mellon University Africa. Since 2024 he's worked as a freelance IT and AI consultant, where he engineers custom software solutions, automates data workflows, and builds intelligent systems for global clients, bringing that same direct, hands-on approach to every Edurown project.",
+    bio: "A Kenya-based IT professional and AI consultant who founded Edurown to give clients worldwide direct access to high-quality technical and software engineering expertise. He holds a First-Class Honours degree in Information Technology and is actively expanding his research in Applied AI. Since 2024, he has worked as a freelance consultant, engineering custom software solutions, automating data workflows, and building intelligent systems for global clients. He brings this same direct, hands-on approach to every Edurown project.",
     cta: { label: "Connect with Stephen", href: CONTACT.whatsapp },
   },
 ];
@@ -58,8 +58,8 @@ function About() {
     <>
       <PageHero
         eyebrow="About Edurown"
-        title="Direct academic support, no middlemen."
-        lead="Edurown connects you directly with the person doing the work, no call centers, no anonymous bidding pools. Just clear communication, careful research, and full confidentiality from start to finish."
+        title="Direct technical consulting, no middlemen."
+        lead="Edurown connects you directly with the person doing the work, no call centers, no anonymous bidding pools. Just clear communication, careful engineering, and full confidentiality from start to finish."
       />
 
       <section className="py-16 md:py-20">
