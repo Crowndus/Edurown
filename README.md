@@ -1,136 +1,135 @@
-# Edurown — Direct Academic & Technical Writing Support
+<div align="center">
+  <h1>Edurown — Technical Consulting & Software Development</h1>
+  
+  <p><b>Direct technical consulting, custom software, and data-driven solutions for clients worldwide.</b></p>
+  <p><i>No middlemen. No bidding pools. Just clear communication and high-quality engineering from start to finish.</i></p>
 
-**Edurown** is a direct, personal academic and technical writing support service for students and professionals worldwide. No middlemen, no bidding pools — just clear communication and careful work, start to finish.
-
-🔗 **Live Site:** [edurown.vercel.app](https://edurown.vercel.app)
-
----
-
-## 📌 Overview
-
-Edurown was built to cut through the opaque middleman chain that exists on platforms like Edusson, EduBirdie, and Nerdy. When you pay $100 on these platforms, the writer often receives just $25 or less. Edurown removes the layers — students pay less, writers get paid fairly, and quality stays high.
-
----
-
-## 🖼️ Preview
-
-<img src="screenshots/preview-banner.jpg" alt="Edurown workspace preview" width="100%" />
-
----
-
-## 🚀 Features
-
-- **📝 Academic Writing:** Essays, research papers, dissertations, case studies, and term papers
-- **📊 Data & Statistical Analysis:** Data visualization, statistical testing, and clear write-ups
-- **💻 Technical Projects:** Web development, coding, and applied coursework
-- **🔬 Lab & Technical Reports:** Bioimage analysis, cybersecurity reports, and more
-- **✏️ Editing & Proofreading:** Line-by-line review for clarity, grammar, and citations
-- **🌍 Worldwide Service:** Comfortable working across time zones and formatting standards
-- **✨ Premium motion:** Sitewide scroll-reveal and page-load transitions, with a `prefers-reduced-motion` fallback
+  <p>
+    <a href="https://edurown.vercel.app/">
+      <img src="https://img.shields.io/badge/Live_Site-C5A059?style=for-the-badge&logo=vercel&logoColor=1a1a1a" alt="Live Site" />
+    </a>
+    <a href="mailto:stephen.crowndus1@gmail.com">
+      <img src="https://img.shields.io/badge/Email-C5A059?style=for-the-badge&logo=gmail&logoColor=1a1a1a" alt="Email" />
+    </a>
+    <a href="https://wa.me/254792915655">
+      <img src="https://img.shields.io/badge/WhatsApp-C5A059?style=for-the-badge&logo=whatsapp&logoColor=1a1a1a" alt="WhatsApp" />
+    </a>
+  </p>
+</div>
 
 ---
 
-## 🛠️ Tech Stack
+### 📌 Overview
 
-| **Category** | **Technologies** |
-| :--- | :--- |
-| **Framework** | React 19, TanStack Start (SSR), TanStack Router, TanStack Query |
-| **Styling** | Tailwind CSS v4, shadcn/ui (Radix primitives) |
-| **Build** | Vite, Nitro |
-| **Icons** | lucide-react |
-| **Hosting** | Vercel |
-| **Version Control** | Git & GitHub |
+Edurown was built to cut through the opaque middleman chain that exists on traditional freelance platforms. When clients pay a premium on large platforms, the developers and engineers often receive a fraction of the cost. 
 
-This is a rebuild of the original static HTML/CSS/JS site on a proper component-based, server-rendered stack — same content and brand, new foundation.
+Edurown removes the layers — clients pay fair rates, engineers get paid properly, and high-quality technical execution is guaranteed.
 
 ---
 
-## 📁 Project Structure
+### 🖼️ Preview
 
-```
+<div align="center">
+  <img src="screenshots/preview-banner.jpg" alt="Edurown workspace preview" width="100%" />
+</div>
+
+---
+
+### 🚀 Platform Features
+
+- **💻 Full-Stack Web Development:** Custom web applications built with React, Next.js, and modern backend APIs.
+- **📊 Data Analysis & Machine Learning:** Data pipelines, predictive modeling (Python/Pandas), and interactive dashboards.
+- **📈 Algorithmic Trading & FinTech:** Development of real-time trading bots, WebSocket integrations, and risk-management algorithms.
+- **🔬 Technical Documentation:** System architecture design, API documentation, and technical writing for engineering projects.
+- **✏️ Code Review & Optimization:** Line-by-line review for performance, security, and best practices.
+- **🌍 Worldwide Service:** Comfortable working across time zones and modern development standards.
+- **✨ Premium Motion:** Sitewide scroll-reveal and page-load transitions, with a `prefers-reduced-motion` fallback.
+
+---
+
+### 🛠️ Tech Stack
+
+<div align="center">
+  <img src="https://img.shields.io/badge/React_19-1a1a1a?style=for-the-badge&logo=react&logoColor=C5A059" alt="React 19" />
+  <img src="https://img.shields.io/badge/TanStack-1a1a1a?style=for-the-badge&logo=react-query&logoColor=C5A059" alt="TanStack" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-1a1a1a?style=for-the-badge&logo=tailwind-css&logoColor=C5A059" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/TypeScript-1a1a1a?style=for-the-badge&logo=typescript&logoColor=C5A059" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-1a1a1a?style=for-the-badge&logo=vite&logoColor=C5A059" alt="Vite" />
+  <img src="https://img.shields.io/badge/Vercel-1a1a1a?style=for-the-badge&logo=vercel&logoColor=C5A059" alt="Vercel" />
+</div>
+
+<br/>
+
+*This is a rebuild of the original static site on a proper component-based, server-rendered stack (TanStack Start / Nitro) — same brand, entirely new technical foundation.*
+
+---
+
+### 📁 Project Structure
+
+```text
 edurown/
 ├── src/
 │   ├── routes/            # File-based routes (/, /about, /services, /pricing, /contact, /blog/*)
 │   ├── components/
 │   │   ├── site/          # Header, Footer, Hero, Blocks, ScrollReveal, RouteProgress, etc.
-│   │   └── ui/             # shadcn/ui primitives
-│   ├── data/               # Site copy, services, testimonials, blog posts
-│   ├── assets/              # Images (hero photo, founder photo, etc.)
-│   ├── hooks/ / lib/         # Shared hooks and utilities
-│   └── styles.css            # Design tokens + Tailwind theme
-├── public/                    # Favicon, robots.txt
-├── screenshots/                # README preview images (Home, About, Services, Pricing, Contact)
+│   │   └── ui/            # shadcn/ui primitives
+│   ├── data/              # Site copy, services, testimonials, blog posts
+│   ├── assets/            # Images (hero photo, founder photo, etc.)
+│   ├── hooks/ / lib/      # Shared hooks and utilities
+│   └── styles.css         # Design tokens + Tailwind theme
+├── public/                # Favicon, robots.txt
+├── screenshots/           # README preview images
 ├── vite.config.ts
 └── package.json
-```
+📸 Live Preview / Screenshots
+Homepage	About
+<img src="screenshots/homepage.jpg" width="380" />	<img src="screenshots/about.jpg" width="380" />
+Services	Pricing
+<img src="screenshots/services.jpg" width="380" />	<img src="screenshots/pricing.jpg" width="380" />
+Contact
+<img src="screenshots/contact.jpg" width="380" />
+(Reshoot and replace these anytime the design changes so they don't go stale.)
 
----
+🚀 Getting Started
+Prerequisites:
 
-## 📸 Live Preview / Screenshots
+Node.js 20+
 
-| Homepage | About |
-| :---: | :---: |
-| <img src="screenshots/homepage.jpg" width="380" /> | <img src="screenshots/about.jpg" width="380" /> |
+npm (or bun)
 
-| Services | Pricing |
-| :---: | :---: |
-| <img src="screenshots/services.jpg" width="380" /> | <img src="screenshots/pricing.jpg" width="380" /> |
+Local Development:
 
-| Contact |
-| :---: |
-| <img src="screenshots/contact.jpg" width="380" /> |
-
-Full page screenshots — reshoot and replace these anytime the design changes so they don't go stale.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 20+
-- npm (or bun)
-
-### Local Development
-
-```bash
+bash
 git clone https://github.com/Crowndus/Edurown.git
 cd Edurown
 npm install
 npm run dev
-```
+Build:
 
-### Build
-
-```bash
+bash
 npm run build
 npm run preview
-```
-
-### Deploy to Vercel
-
+Deploy to Vercel:
 Vercel is connected to this GitHub repo, so pushing to the deployed branch redeploys automatically. Vercel auto-detects the Nitro build output — no extra configuration needed. If a fresh import is ever required:
 
-1. Push your changes to GitHub
-2. Go to [vercel.com](https://vercel.com) → **Add New Project** → import this repository
-3. Framework Preset: leave on auto-detect (or "Other") — Build Command `npm run build`, Install Command `npm install`
-4. Click **Deploy**
+Push your changes to GitHub
 
----
+Go to vercel.com → Add New Project → import this repository
 
-## 📫 Contact
+Framework Preset: leave on auto-detect (or "Other") — Build Command npm run build, Install Command npm install
 
-- **Website:** [edurown.vercel.app](https://edurown.vercel.app)
-- **Email:** stephen.crowndus1@gmail.com
-- **WhatsApp:** [+254 792 915655](https://wa.me/254792915655)
-- **GitHub:** [Crowndus](https://github.com/Crowndus)
+Click Deploy
 
----
+📫 Contact
+Website: edurown.vercel.app
 
-## 📄 License
+Email: stephen.crowndus1@gmail.com
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+WhatsApp: +254 792 915655
 
----
+GitHub: Crowndus
 
-*"Solving problems, always. We're getting there."* 🚀
+📄 License
+This project is licensed under the MIT License — see the LICENSE file for details.
+
+<div align="center"> <p><i>"Solving problems, always. We're getting there."</i> 🚀</p> </div> ```
