@@ -12,15 +12,11 @@ import {
   Check,
   Quote,
   Star,
-  PenLine,
-  FileText,
-  GraduationCap,
   BarChart3,
   Code2,
   Terminal,
   Briefcase,
   FlaskConical,
-  Award,
   type LucideIcon,
 } from "lucide-react";
 
@@ -44,17 +40,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Edurown — Direct Academic & Technical Writing Support" },
+      { title: "Edurown — Technical Consulting & Software Development" },
       {
         name: "description",
         content:
-          "Work one-on-one with a Carnegie Mellon-admitted engineer for essays, research papers, dissertations, data analysis, and technical projects. No middlemen.",
+          "Work one-on-one with a software engineer for custom web apps, data analysis, machine learning, and algorithmic trading systems. No middlemen.",
       },
-      { property: "og:title", content: "Edurown — Direct Academic & Technical Writing Support" },
+      { property: "og:title", content: "Edurown — Technical Consulting & Software Development" },
       {
         property: "og:description",
         content:
-          "Work one-on-one with a Carnegie Mellon-admitted engineer for essays, research papers, dissertations, data analysis, and technical projects. No middlemen.",
+          "Work one-on-one with a software engineer for custom web apps, data analysis, machine learning, and algorithmic trading systems. No middlemen.",
       },
     ],
   }),
@@ -64,15 +60,15 @@ export const Route = createFileRoute("/")({
 const PILLAR_ICONS = [UserCheck, Lock, Globe] as const;
 
 const MARQUEE_ICONS: Record<string, LucideIcon> = {
-  Essays: PenLine,
-  "Research Papers": FileText,
-  "Dissertations & Theses": GraduationCap,
+  "Data Science & Machine Learning": FlaskConical,
+  "Full-Stack Web Development": Code2,
+  "Algorithmic Trading Systems": BarChart3,
   "Data & Statistical Analysis": BarChart3,
   "Web Development": Code2,
   "Coding Projects": Terminal,
   "Case Studies": Briefcase,
-  "Lab & Technical Reports": FlaskConical,
-  "Scholarship Support": Award,
+  "Data Analysis & Visualization": BarChart3,
+  "Technical Consulting & Strategy": Briefcase,
 };
 
 
@@ -85,15 +81,15 @@ function Index() {
           <div>
             <span className="load-in load-in-1 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
               <span aria-hidden="true" className="h-px w-8 bg-gold" />
-              Academic &amp; Technical Support, Direct
+              Technical Consulting &amp; Software Development
             </span>
             <h1 className="load-in load-in-2 mt-6 text-4xl leading-[1.06] md:text-[3.4rem]">
-              CMU Africa-bound AI Engineer. Direct academic help. No middlemen.
+              Founder &amp; Lead Software Engineer. Direct technical help. No middlemen.
             </h1>
             <p className="load-in load-in-3 mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               On most major platforms, your $100 order quietly passes through multiple hands before
-              reaching the writer, leaving just a fraction for the actual work. Edurown removes the
-              chain. You work one-on-one with a Carnegie Mellon-admitted engineer. Worldwide
+              reaching the engineer, leaving just a fraction for the actual work. Edurown removes the
+              chain. You work one-on-one with a software engineer. Worldwide
               service. Fair pricing.
             </p>
 
@@ -317,7 +313,7 @@ function Index() {
                 href={CONTACT.whatsapp}
                 className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-bold text-ink-foreground shadow-cta"
               >
-                Ask for a Sample
+                Book a Free Consultation
               </a>
               <Link
                 to="/pricing"

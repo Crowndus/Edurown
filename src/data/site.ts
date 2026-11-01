@@ -23,29 +23,29 @@ export const FOOTER_NAV = [
 ] as const;
 
 export const MARQUEE_ITEMS = [
-  "Essays",
-  "Research Papers",
-  "Dissertations & Theses",
+  "Data Science & Machine Learning",
+  "Full-Stack Web Development",
+  "Algorithmic Trading Systems",
   "Data & Statistical Analysis",
   "Web Development",
   "Coding Projects",
   "Case Studies",
-  "Lab & Technical Reports",
-  "Scholarship Support",
+  "Data Analysis & Visualization",
+  "Technical Consulting & Strategy",
 ];
 
 export const TRUST_BADGES = [
-  "100% Human-Written",
-  "AI-Detection Safe",
-  "Turnitin & Grammarly Verified",
+  "Production-Grade Code",
+  "Custom Data Pipelines",
+  "Scalable Architecture",
 ];
 
 export const HOME_CHIPS = [
-  "Essays",
-  "Research Papers",
-  "Dissertations",
+  "Data Science & Machine Learning",
+  "Full-Stack Web Development",
+  "Algorithmic Trading Systems",
   "Data Analysis",
-  "Lab Reports",
+  "Data Analysis & Visualization",
   "Case Studies",
 ];
 
@@ -113,15 +113,15 @@ export const HOME_STEPS = [
 ];
 
 export const CAUTION_POINTS = [
-  "Ask for a short sample in your subject area",
+  "Book a free scoping call before you commit",
   "Split payment into milestones on larger projects",
   "See exactly who you're talking to, real name, direct line",
 ];
 
 export const SAFEGUARDS = [
   {
-    label: "Free sample:",
-    body: "Send your topic, get 300 words written before you pay.",
+    label: "Free Consultation:",
+    body: "Book a 30-minute technical scoping call to discuss your project architecture before you commit.",
   },
   {
     label: "Milestone payments:",
@@ -185,16 +185,16 @@ export const FAQS = [
 
 export const SERVICES_ALL = [
   {
-    title: "Essay Writing",
-    body: "Well-structured, original essays across subjects, argued clearly and referenced correctly.",
+    title: "Custom Web Application Development",
+    body: "We build fast, responsive, and scalable web apps using React, Next.js, and modern backend APIs.",
   },
   {
-    title: "Research Papers",
-    body: "In-depth research grounded in credible sources, with a clear methodology and argument.",
+    title: "Data Analysis & Predictive Modeling",
+    body: "Transform raw data into actionable insights. We use Python, Pandas, and Scikit-learn to build predictive models and interactive data dashboards.",
   },
   {
-    title: "Dissertations & Thesis Assistance",
-    body: "Chapter-by-chapter support, from proposal and literature review through to final draft.",
+    title: "System Architecture & Technical Documentation",
+    body: "We design robust system architectures and write clear, professional technical documentation for your engineering projects.",
   },
   {
     title: "Data & Statistical Analysis",
@@ -209,8 +209,8 @@ export const SERVICES_ALL = [
     body: "Line-by-line review for clarity, grammar, structure, and citation accuracy.",
   },
   {
-    title: "Coursework Help",
-    body: "Applied coursework across subjects, including web design and technical assignments.",
+    title: "Workflow Automation & Scripting",
+    body: "Save hundreds of hours by automating your manual business processes, web scraping, and data entry workflows.",
   },
   {
     title: "Case Studies",
@@ -221,8 +221,8 @@ export const SERVICES_ALL = [
     body: "Thorough, well-organized reviews that map the existing research on your topic.",
   },
   {
-    title: "Term Papers",
-    body: "Full-length term papers researched and written to your course's specific requirements.",
+    title: "Algorithmic Trading & FinTech Solutions",
+    body: "Development of real-time trading bots, market data pipelines, and risk-management algorithms.",
   },
 ];
 
@@ -231,20 +231,20 @@ export const PRICING_GROUPS = [
     group: "Writing & Research",
     rows: [
       {
-        title: "Essays",
-        body: "Priced by academic level - high school, undergraduate, or graduate.",
+        title: "Data Analysis & Scripting",
+        body: "Data cleaning, analysis scripts, and clear reports on your findings.",
         price: "$8 - $16",
         unit: "per page",
       },
       {
-        title: "Research Papers",
-        body: "Includes source research, citations, and structured argument.",
+        title: "Web App Development (MVP)",
+        body: "A working first version of your product, built with React, Next.js, and a modern backend.",
         price: "$12 - $20",
         unit: "per page",
       },
       {
-        title: "Dissertations & Thesis Assistance",
-        body: "Chapter-by-chapter or full project, priced on scope and level.",
+        title: "Full-Stack Software Engineering",
+        body: "End-to-end builds from architecture to deployment, priced on scope.",
         price: "from $400",
         unit: "per project",
       },
@@ -255,8 +255,8 @@ export const PRICING_GROUPS = [
         unit: "per page",
       },
       {
-        title: "Term Papers & Coursework Help",
-        body: "Full-length work matched to your course's specific requirements.",
+        title: "Algorithmic Trading Bots",
+        body: "Real-time trading bots, market data pipelines, and risk management matched to your strategy.",
         price: "$10 - $16",
         unit: "per page",
       },
@@ -272,8 +272,8 @@ export const PRICING_GROUPS = [
     group: "Applications & Scholarships",
     rows: [
       {
-        title: "Application Essay Coaching & Editing",
-        body: "Structural feedback, editing, and line-level polish on your own personal statement - you stay the author.",
+        title: "Technical Interview Prep & Code Review",
+        body: "Mock interviews, feedback, and line-level code review to sharpen your engineering skills.",
         price: "$35 - $75",
         unit: "per essay",
       },
@@ -340,7 +340,7 @@ export const PRICING_GROUPS = [
 ];
 
 export const PRICING_DIFFERENCE = [
-  { label: "You get a free sample", body: "- 300 words, your topic, before you pay." },
+  { label: "You get a free consultation", body: "- 30-minute scoping call before you commit." },
   { label: "Milestone payments", body: "- 50% now, 50% when you're happy." },
   { label: "Your work stays private", body: "- never shared, never resold." },
   { label: "Direct WhatsApp support", body: "- message Stephen anytime." },

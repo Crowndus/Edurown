@@ -17,7 +17,7 @@ export const Route = createFileRoute("/blog/")({
       {
         name: "description",
         content:
-          "Straight talk on academic writing, data analysis, research, and technical projects from a Carnegie Mellon-admitted engineer.",
+          "Straight talk on data analysis, web development, and algorithmic trading from a working software engineer.",
       },
       { property: "og:title", content: "Blog — Expert Insights from The Crown | Edurown" },
       {
@@ -47,7 +47,7 @@ function Blog() {
       <PageHero
         eyebrow="Blog"
         title="Expert Insights from The Crown"
-        lead="Straight talk on academic writing, data analysis, research, and technical projects from a Carnegie Mellon-admitted engineer."
+        lead="Straight talk on data analysis, web development, and algorithmic trading from a working software engineer."
       >
         <dl className="mt-10 grid max-w-2xl gap-4 sm:grid-cols-3">
           {stats.map((s) => (

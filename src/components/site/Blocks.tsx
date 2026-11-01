@@ -133,9 +133,9 @@ export function FounderCard() {
         className="mx-auto aspect-square w-full max-w-[18rem] rounded-2xl object-cover"
       />
       <h3 className="mt-4 text-lg">Stephen — "The Crown"</h3>
-      <p className="text-sm text-muted-foreground">CMU Africa-bound AI Engineer</p>
+      <p className="text-sm text-muted-foreground">Founder & Lead Software Engineer</p>
       <div className="mt-4 flex flex-wrap justify-center gap-2">
-        {["First-Class Honours", "Carnegie Mellon", "1-on-1 Support"].map((b) => (
+        {["First-Class Honours", "Full-Stack Engineer", "1-on-1 Support"].map((b) => (
           <span
             key={b}
             className="rounded-full bg-gold-tint px-3 py-1 text-[0.68rem] font-semibold text-gold-deep"

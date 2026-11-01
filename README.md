@@ -6,13 +6,13 @@
 
   <p>
     <a href="https://edurown.vercel.app/">
-      <img src="https://img.shields.io/badge/Live_Site-C5A059?style=for-the-badge&logo=vercel&logoColor=1a1a1a" alt="Live Site" />
+      <img src="https://img.shields.io/badge/Live_Site-1A1A1A?style=for-the-badge&logo=vercel&logoColor=C5A059" alt="Live Site" />
     </a>
     <a href="mailto:stephen.crowndus1@gmail.com">
-      <img src="https://img.shields.io/badge/Email-C5A059?style=for-the-badge&logo=gmail&logoColor=1a1a1a" alt="Email" />
+      <img src="https://img.shields.io/badge/Email-1A1A1A?style=for-the-badge&logo=gmail&logoColor=C5A059" alt="Email" />
     </a>
     <a href="https://wa.me/254792915655">
-      <img src="https://img.shields.io/badge/WhatsApp-C5A059?style=for-the-badge&logo=whatsapp&logoColor=1a1a1a" alt="WhatsApp" />
+      <img src="https://img.shields.io/badge/WhatsApp-1A1A1A?style=for-the-badge&logo=whatsapp&logoColor=C5A059" alt="WhatsApp" />
     </a>
   </p>
 </div>
@@ -24,14 +24,6 @@
 Edurown was built to cut through the opaque middleman chain that exists on traditional freelance platforms. When clients pay a premium on large platforms, the developers and engineers often receive a fraction of the cost. 
 
 Edurown removes the layers — clients pay fair rates, engineers get paid properly, and high-quality technical execution is guaranteed.
-
----
-
-### 🖼️ Preview
-
-<div align="center">
-  <img src="screenshots/preview-banner.jpg" alt="Edurown workspace preview" width="100%" />
-</div>
 
 ---
 
@@ -50,12 +42,12 @@ Edurown removes the layers — clients pay fair rates, engineers get paid proper
 ### 🛠️ Tech Stack
 
 <div align="center">
-  <img src="https://img.shields.io/badge/React_19-1a1a1a?style=for-the-badge&logo=react&logoColor=C5A059" alt="React 19" />
-  <img src="https://img.shields.io/badge/TanStack-1a1a1a?style=for-the-badge&logo=react-query&logoColor=C5A059" alt="TanStack" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-1a1a1a?style=for-the-badge&logo=tailwind-css&logoColor=C5A059" alt="Tailwind" />
-  <img src="https://img.shields.io/badge/TypeScript-1a1a1a?style=for-the-badge&logo=typescript&logoColor=C5A059" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Vite-1a1a1a?style=for-the-badge&logo=vite&logoColor=C5A059" alt="Vite" />
-  <img src="https://img.shields.io/badge/Vercel-1a1a1a?style=for-the-badge&logo=vercel&logoColor=C5A059" alt="Vercel" />
+  <img src="https://img.shields.io/badge/React_19-1A1A1A?style=for-the-badge&logo=react&logoColor=C5A059" alt="React 19" />
+  <img src="https://img.shields.io/badge/TanStack-1A1A1A?style=for-the-badge&logo=react-query&logoColor=C5A059" alt="TanStack" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS_v4-1A1A1A?style=for-the-badge&logo=tailwind-css&logoColor=C5A059" alt="Tailwind" />
+  <img src="https://img.shields.io/badge/TypeScript-1A1A1A?style=for-the-badge&logo=typescript&logoColor=C5A059" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-1A1A1A?style=for-the-badge&logo=vite&logoColor=C5A059" alt="Vite" />
+  <img src="https://img.shields.io/badge/Vercel-1A1A1A?style=for-the-badge&logo=vercel&logoColor=C5A059" alt="Vercel" />
 </div>
 
 <br/>
@@ -81,55 +73,51 @@ edurown/
 ├── screenshots/           # README preview images
 ├── vite.config.ts
 └── package.json
-📸 Live Preview / Screenshots
-Homepage	About
-<img src="screenshots/homepage.jpg" width="380" />	<img src="screenshots/about.jpg" width="380" />
-Services	Pricing
-<img src="screenshots/services.jpg" width="380" />	<img src="screenshots/pricing.jpg" width="380" />
-Contact
-<img src="screenshots/contact.jpg" width="380" />
-(Reshoot and replace these anytime the design changes so they don't go stale.)
+```
 
-🚀 Getting Started
-Prerequisites:
+### 🚀 Getting Started
 
-Node.js 20+
+**Prerequisites:**
 
-npm (or bun)
+- Node.js 20+
+- npm (or bun)
 
-Local Development:
+**Local Development:**
 
-bash
+```bash
 git clone https://github.com/Crowndus/Edurown.git
 cd Edurown
 npm install
 npm run dev
-Build:
+```
 
-bash
+**Build:**
+
+```bash
 npm run build
 npm run preview
-Deploy to Vercel:
+```
+
+**Deploy to Vercel:**
+
 Vercel is connected to this GitHub repo, so pushing to the deployed branch redeploys automatically. Vercel auto-detects the Nitro build output — no extra configuration needed. If a fresh import is ever required:
 
-Push your changes to GitHub
+1. Push your changes to GitHub
+2. Go to vercel.com → Add New Project → import this repository
+3. Framework Preset: leave on auto-detect (or "Other") — Build Command `npm run build`, Install Command `npm install`
+4. Click Deploy
 
-Go to vercel.com → Add New Project → import this repository
+### 📫 Contact
 
-Framework Preset: leave on auto-detect (or "Other") — Build Command npm run build, Install Command npm install
+- **Website:** [edurown.vercel.app](https://edurown.vercel.app/)
+- **Email:** stephen.crowndus1@gmail.com
+- **WhatsApp:** +254 792 915655
+- **GitHub:** [Crowndus](https://github.com/Crowndus)
 
-Click Deploy
+### 📄 License
 
-📫 Contact
-Website: edurown.vercel.app
+This project is licensed under the MIT License — see the `LICENSE` file for details.
 
-Email: stephen.crowndus1@gmail.com
-
-WhatsApp: +254 792 915655
-
-GitHub: Crowndus
-
-📄 License
-This project is licensed under the MIT License — see the LICENSE file for details.
-
-<div align="center"> <p><i>"Solving problems, always. We're getting there."</i> 🚀</p> </div> ```
+<div align="center">
+  <p><i>"Solving problems, always. We're getting there."</i> 🚀</p>
+</div>

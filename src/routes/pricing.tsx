@@ -97,7 +97,7 @@ function Pricing() {
                 href={CONTACT.whatsapp}
                 className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-bold text-ink-foreground shadow-cta"
               >
-                Ask for a Sample
+                Book a Free Consultation
               </a>
               <Link
                 to="/about"

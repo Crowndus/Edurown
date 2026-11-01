@@ -86,13 +86,13 @@ export function HelpWidgets() {
                     Hi there! 👋 I'm Stephen — "The Crown".
                   </p>
                   <p className="rounded-2xl rounded-bl-sm bg-secondary px-3.5 py-2.5">
-                    Need help with a paper, data analysis, or technical project? I'm here to help!
+                    Need help with a web app, data analysis, or trading system? I'm here to help!
                   </p>
                 </div>
               </div>
               <p className="rounded-2xl bg-gold-tint px-3.5 py-2.5 text-foreground">
-                💡 Send me your topic and I'll send you a{" "}
-                <strong className="font-semibold">free 300-word sample</strong> — no strings
+                💡 Send me your project idea and I'll set you up with a{" "}
+                <strong className="font-semibold">free 30-minute consultation</strong> — no strings
                 attached.
               </p>
               <div className="flex gap-2 pt-1">

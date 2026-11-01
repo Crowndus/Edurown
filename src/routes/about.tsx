@@ -48,7 +48,7 @@ const TEAM = [
     alt: "Stephen, founder and lead researcher at Edurown",
     role: "Founder",
     name: 'Stephen — "The Crown"',
-    bio: "A Kenya-based IT and AI consultant who founded Edurown to give students and professionals abroad direct access to careful, well-researched academic and technical work. He holds a First-Class Honours degree in Information Technology and has been admitted to Carnegie Mellon University Africa's Master's program in Engineering AI for Fall 2026. Since 2024 he's worked as a freelance IT and AI consultant, handling research, data analysis, and technical writing for clients internationally, bringing that same direct, hands-on approach to every Edurown project.",
+    bio: "A Kenya-based IT and AI consultant who founded Edurown to give students and professionals abroad direct access to careful, well-researched academic and technical work. He holds a First-Class Honours degree in Information Technology and is currently applying for the Master's in Engineering AI (MSEAI) at Carnegie Mellon University Africa. Since 2024 he's worked as a freelance IT and AI consultant, where he engineers custom software solutions, automates data workflows, and builds intelligent systems for global clients, bringing that same direct, hands-on approach to every Edurown project.",
     cta: { label: "Connect with Stephen", href: CONTACT.whatsapp },
   },
 ];
